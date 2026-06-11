@@ -14,7 +14,7 @@
 //    type    : "birth" / "death" / "event"
 //
 //  カテゴリ一覧:
-//    政治（国内）/ 政治（国際）/ 法 / 要人 / 社会 / 宗教 /
+//    国内政治 / 国際政治 / 法 / 要人 / 社会 / 宗教 /
 //    思想 / 文学 / 音楽 / 舞台芸術 / 美術 / 科学技術 / メディア
 //
 //  PERSONS: 人物辞書
@@ -32,21 +32,21 @@
 const EVENTS = [
 
   // ―― 1774 ――
-  { year:1774, date:"5月10日", cat:"政治（国内）", text:"即位", person:"ルイ16世", nameAlt:"Louis XVI", country:"フランス", place:null, type:"event" },
-  { year:1774, date:"7月21日", cat:"政治（国際）", text:"キュチュク-カルナイジ条約　第1次露土戦争講和", person:null, nameAlt:"Кючук-Кайнарджийский мир", country:"ロシア/トルコ", place:"", type:"event" },
+  { year:1774, date:"5月10日", cat:"国内政治", text:"即位", person:"ルイ16世", nameAlt:"Louis XVI", country:"フランス", place:null, type:"event" },
+  { year:1774, date:"7月21日", cat:"国際政治", text:"キュチュク-カルナイジ条約　第1次露土戦争講和", person:null, nameAlt:"Кючук-Кайнарджийский мир", country:"ロシア/トルコ", place:"", type:"event" },
   { year:1774, date:"5月6日", cat:"要人", text:"生誕", person:"クリストフォル・リーヴェン伯", nameAlt:"Христофор Андреевич Ливен", country:"ロシア", place:null, type:"birth" },
   { year:1774, date:"11月27日", cat:"要人", text:"生誕　大臣", person:"エゴール・フランツェヴィチ・カンクリン", nameAlt:"Егор Францевич Канкрин", country:"ドイツ", place:"ヘッセン", type:"birth" },
 
   // ―― 1775 ――
-  { year:1775, date:"4月14日", cat:"政治（国内）", text:"フィラデルフィア協会、創設　最初の反奴隷制度活動団体", person:null, nameAlt:null, country:"アメリカ", place:"フィラデルフィア", type:"event" },
-  { year:1775, date:"4月19日", cat:"政治（国際）", text:"アメリカ独立戦争、開始　～1783年9月3日", person:null, nameAlt:null, country:"アメリカVSイギリス", place:null, type:"event" },
+  { year:1775, date:"4月14日", cat:"国内政治", text:"フィラデルフィア協会、創設　最初の反奴隷制度活動団体", person:null, nameAlt:null, country:"アメリカ", place:"フィラデルフィア", type:"event" },
+  { year:1775, date:"4月19日", cat:"国際政治", text:"アメリカ独立戦争、開始　～1783年9月3日", person:null, nameAlt:null, country:"アメリカVSイギリス", place:null, type:"event" },
   { year:1775, date:"10月12日", cat:"要人", text:"生誕　牧師", person:"ライマン・ビーチャー", nameAlt:"Lyman Beecher", country:"アメリカ", place:"コネティカット", type:"birth" },
   { year:1775, date:"1月27日", cat:"思想", text:"生誕", person:"フリードリヒ・シェリング", nameAlt:"Friedrich Wilhelm Joseph von Schelling", country:"ドイツ", place:"ヴュルテンベルク", type:"birth" },
   { year:1775, date:"1月30日", cat:"文学", text:"生誕", person:"ウォルター・サヴェージ・ランダー", nameAlt:"Walter Savage Landor", country:"イギリス", place:"ウォリック", type:"birth" },
   { year:1775, date:"11月12日", cat:"思想", text:"生誕", person:"ミハイル・カチェノフスキー", nameAlt:"Михаил Трофимович Каченовский", country:"ウクライナ", place:"ハルキウ", type:"birth" },
 
   // ―― 1776 ――
-  { year:1776, date:"7月4日", cat:"政治（国内）", text:"アメリカ独立宣言", person:null, nameAlt:"United States Declaration of Independence", country:"アメリカ", place:null, type:"event" },
+  { year:1776, date:"7月4日", cat:"国内政治", text:"アメリカ独立宣言", person:null, nameAlt:"United States Declaration of Independence", country:"アメリカ", place:null, type:"event" },
   { year:1776, date:null, cat:"思想", text:"『アメリカ人奴隷に関する対話』", person: "サミュエル・ホプキンス", nameAlt:"Samuel Hopkins", country:"アメリカ", place:"『アメリカ人奴隷に関する対話』", type:"event" },
   { year:1776, date:"7月26日", cat:"文学", text:"生誕", person:"レフ・ネヴァホーヴィチ", nameAlt:"Лев Николаевич Невахович", country:"ポーランド", 
   place:"レティチェフ", type:"birth" },
@@ -145,7 +145,7 @@ const EVENTS = [
   { year:1812, date:"10月12日", cat:"科学技術", text:"生誕　化学者", person:"アスカニオ・ソブレロ", nameAlt: "Ascanio Sobrero", country:"イタリア", place:"ピエモンテ", type:"birth" }, 
 
   // ── 1813 ──
-  { year:1813, date:"4月23日", cat:"", text:"生誕　歴史家", person:"フレデリック・オザナム", nameAlt: "Frédéric Ozanam", country:"イタリア", place:"ミラノ", type:"birth" },
+  { year:1813, date:"4月23日", cat:"思想", text:"生誕　歴史家", person:"フレデリック・オザナム", nameAlt: "Frédéric Ozanam", country:"イタリア", place:"ミラノ", type:"birth" },
   { year:1813, date:null, cat:"科学技術", text:"王立研究所（The Royal Institution of Great Britain）教授に", person:"マイケル・ファラデー", nameAlt: "Michael Faraday", country:"イギリス", place:"ロンドン", type:"event" }, 
 
   // ―― 1815 ――
@@ -230,7 +230,7 @@ const EVENTS = [
   { year:1842, date:"2月4日", cat:"思想", text:"死去　哲学者", person:"テオドール・ジュフロワ", nameAlt: "Théodore Simon Jouffroy", country:"フランス", place:"パリ", type:"death" },
 
   // ── 1843 ──
-  { year:1843, date:null, cat:"政治（国際）", text:"清、イギリスに香港を割譲", person:null, country:"清/イギリス", type:"event" },
+  { year:1843, date:null, cat:"国際政治", text:"清、イギリスに香港を割譲", person:null, country:"清/イギリス", type:"event" },
   { year:1843, date:"2月12日", cat:"宗教", text:"新島襄　生誕　キリスト教系教育者", country:"日本", place:"東京", type:"birth" },
   { year:1843, date:"3月27日", cat:"社会", text:"マルタン=ギヨーム・ビエンネ　死去　金細工職人", country:"フランス", place:"パリ", type:"death" },
   { year:1843, date:"3月30日", cat:"文学", text:"コンスタンティン・ミハイロヴィチ・スタニュコーヴィチ　生誕", country:"ロシア", place:"セヴァストーポリ", type:"birth" },
@@ -267,11 +267,11 @@ const EVENTS = [
   { year:1843, date:null, cat:"科学技術", text:"ジャン=アントワーヌ・アルノー　レストランがメニューを日々変えられるような装置を作り、特許を取る。流行せず", country:"フランス", type:"event" },
 
   // ── 1844 ──
-  { year:1844, date:null, cat:"政治（国際）", text:"ロシアのアルメニア人居留地がティフリス（トビリシ）に編入",person:null, country:"ロシア", type:"event" },
+  { year:1844, date:null, cat:"国際政治", text:"ロシアのアルメニア人居留地がティフリス（トビリシ）に編入",person:null, country:"ロシア", type:"event" },
   { year:1844, date:"1月13日", cat:"要人", text:"アンリ・ガティアン・ベルトラン　死去　将軍", person:null, country:"フランス", place:"シャトールー", type:"death" },
   { year:1844, date:"1月16日", cat:"思想", text:"ハインリヒ・デニフレ　生誕　歴史家", person:null, country:"オーストリア", place:"チロル", type:"birth" },
   { year:1844, date:"1月27日", cat:"文学", text:"シャルル・ノディエ　死去", person:null, country:"フランス", place:"パリ", type:"death" },
-  { year:1844, date:"3月8日", cat:"政治（国内）", text:"カール14世ヨハン　死去", person:null, country:"スウェーデン", place:"ストックホルム", type:"death" },
+  { year:1844, date:"3月8日", cat:"国内政治", text:"カール14世ヨハン　死去", person:null, country:"スウェーデン", place:"ストックホルム", type:"death" },
   { year:1844, date:"3月10日", cat:"音楽", text:"生誕", person:"パブロ・デ・サラサーテ", country:"スペイン", place:"パンプローナ", type:"birth" },
   { year:1844, date:"3月14日", cat:"要人", text:"生誕", person:"ウンベルト1世", country:"イタリア", place:"トリノ", type:"birth" },
   { year:1844, date:"3月18日", cat:"音楽", text:"生誕", person:"ニコライ・アンドレーヴィチ・リムスキー＝コルサコフ", country:"ロシア", place:"チフヴィン", type:"birth" },
@@ -294,7 +294,7 @@ const EVENTS = [
   { year:1844, date:"10月22日", cat:"舞台芸術", text:"サラ・ベルナール　生誕", person:null, country:"フランス", place:"パリ", type:"birth" },
   { year:1844, date:"11月21日", cat:"文学", text:"死去（肺炎）", person:"イヴァン・アンドレーヴィチ・クルィローフ", country:"ロシア", place:"ペテルブルク", type:"death" },
   { year:1844, date:"12月1日", cat:"要人", text:"アレクサンドラ・オブ・デンマーク　生誕", country:"デンマーク", place:"コペンハーゲン", type:"birth" },
-  { year:1844, date:null, cat:"政治（国内）", text:"アレクサンドロス・マヴロコルダートス、初代首相に", country:"ギリシャ", type:"event" },
+  { year:1844, date:null, cat:"国内政治", text:"アレクサンドロス・マヴロコルダートス、初代首相に", country:"ギリシャ", type:"event" },
   { year:1844, date:null, cat:"文学", text:"『冬物語』", person:"ハインリヒ・ハイネ", country:"ドイツ", type:"event" },
   { year:1844, date:null, cat:"文学", text:"『三銃士』　『モンテ・クリスト伯』連載開始", person:"アレクサンドル・デュマ", country:"フランス", type:"event" },
   { year:1844, date:null, cat:"文学", text:"詩『ドリームランド』", person:"エドガー・アラン・ポー", country:"イギリス", type:"event" },
@@ -312,7 +312,7 @@ const EVENTS = [
   { year:1844, date:null, cat:"メディア", text:"ジョン・ダービン旅行記『ヨーロッパ、特にフランスと大英帝国の見聞』", person:null, country:"アメリカ", type:"event" },
 
   // ── 1845 ──
-  { year:1845, date:null, cat:"政治（国内）", text:"カメハメハ3世、ホノルルを首都に", person:null, country:"アメリカ", place:"ハワイ王国", type:"event" },
+  { year:1845, date:null, cat:"国内政治", text:"カメハメハ3世、ホノルルを首都に", person:null, country:"アメリカ", place:"ハワイ王国", type:"event" },
   { year:1845, date:null, cat:"法", text:"刑事罰・強制罰法典　ロシア最初の刑法典", person:null, country:"ロシア", type:"event" },
   { year:1845, date:null, cat:"社会", text:"ジャガイモ飢饉　以後数年にわたり", person:null, country:"イギリス", place:"アイルランド", type:"event" },
   { year:1845, date:null, cat:"社会", text:"ネバド・デル・ルイス山濁流", person:null, country:"コロンビア", place:"アンデス山脈", type:"event" },
@@ -333,7 +333,7 @@ const EVENTS = [
   { year:1845, date:"8月25日", cat:"要人", text:"生誕", person:"ルートヴィヒ2世", country:"ドイツ", place:"ミュンヘン（バイエルン）", type:"birth" },
   { year:1845, date:"9月21日", cat:"要人", text:"エゴール・フランツェヴィチ・カンクリン　死去　大臣", person:null, country:"ロシア", place:"パヴロフスク", type:"birth" },
   { year:1845, date:"9月22日", cat:"宗教", text:"ハルトマン・グリザール　生誕　イエズス会司祭", person:null, country:"ドイツ", place:"コブレンツ（プロイセン）", type:"birth" },
-  { year:1845, date:"9月23日", cat:"政治（国内）", text:"リミニにて民衆反乱", person:null, country:"イタリア", place:"教会国家", type:"event" },
+  { year:1845, date:"9月23日", cat:"国内政治", text:"リミニにて民衆反乱", person:null, country:"イタリア", place:"教会国家", type:"event" },
   { year:1845, date:"9月28日", cat:"要人", text:"ディミトリー・パーヴロヴィチ・タチーシチェフ　死去　政治家（ロシア）", person:null, country:"オーストリア", place:"ウィーン", type:"event" },
   { year:1845, date:"11月16日", cat:"美術", text:"ニコライ・リヴォーヴィチ・スカドフスキー　生誕", person:null, country:"ロシア", place:"ヘルソン", type:"birth" },
   { year:1845, date:"12月15日", cat:"要人", text:"アレクサンドル・イヴァーノヴィチ・トゥルゲーネフ　死去　政治家", person:null, country:"ロシア", place:"モスクワ", type:"death" },
@@ -352,63 +352,63 @@ const EVENTS = [
   { year:1845, date:null, cat:"宗教", text:"グランヴィル文学・神学校、グランヴィル大学に改名", person:null, country:"アメリカ", place:"オハイオ", type:"event" },
 
   // ── 1846 ──
-  { year:1846, date:null, cat:"政治（国内）", text:"ポーランド民族主義者蜂起", person:null, country:"ロシア", type:"event" },
-  { year:1846, date:"6月1日", cat:"政治（国際）",  text:"グレゴリオス16世　死去 / ピウス9世　教皇就任（6月16日）", person:null, country:"教皇庁", type:"event" },
+  { year:1846, date:null, cat:"国内政治", text:"ポーランド民族主義者蜂起", person:null, country:"ロシア", type:"event" },
+  { year:1846, date:"6月1日", cat:"国際政治",  text:"グレゴリオス16世　死去 / ピウス9世　教皇就任（6月16日）", person:null, country:"教皇庁", type:"event" },
   { year:1846, date:"5月30日", cat:"美術", text:"生誕　ペテルブルク", person:"ピーター・カール・ファベルジェ",  country:"ロシア", type:"birth" },
   { year:1850, date:null, cat:"科学技術", text:"電気電信会社、創立　世界初の公開電信会社", person:null, nameAlt: "Electric Telegraph Company", country:"イギリス", place:null, type:"event" },
   { year:1846, date:"", cat:"科学技術", text:"ニトログリセリン発見", person:"アスカニオ・ソブレロ", nameAlt: "Ascanio Sobrero", country:"イタリア", place:null, type:"event" },
 
   // ── 1847 ──
   { year:1847, date:"6月12日", cat:"思想", text:"生誕　哲学者", person:"ピエール＝シモン・バランシュ", nameAlt: "Pierre-Simon Ballanche", country:"フランス", place:"パリ", type:"death" },
-  { year:1847, date:"9月8日", cat:"", text:"死去（結核）　歴史家", person:"フレデリック・オザナム", nameAlt: "Frédéric Ozanam", country:"フランス", place:"マルセイユ", type:"death" },
+  { year:1847, date:"9月8日", cat:"思想", text:"死去（結核）　歴史家", person:"フレデリック・オザナム", nameAlt: "Frédéric Ozanam", country:"フランス", place:"マルセイユ", type:"death" },
   { year:1847, date:"11月4日", cat:"音楽", text:"死去　ライプツィヒ（過労）",  person:"フェリックス・メンデルスゾーン", country:"ドイツ",  type:"death" },
   { year:1847, date:null,    cat:"文学", text:"シャーロット・ブロンテ『ジェイン・エア』刊行",   person:null, country:"イギリス", type:"event" },
 
   // ── 1848 ──
-  { year:1848, date:"1月20日", cat:"政治（国内）", text:"クリスチャン8世　死去 / フレゼリク7世　即位", person:null, country:"デンマーク", type:"event" },
+  { year:1848, date:"1月20日", cat:"国内政治", text:"クリスチャン8世　死去 / フレゼリク7世　即位", person:null, country:"デンマーク", type:"event" },
   { year:1848, date:"2月5日", cat:"文学", text:"ユイスマンス　生誕　パリ", person:"ジョリス＝カルル・ユイスマンス", country:"フランス",  type:"birth" },
   { year:1848, date:"4月8日", cat:"音楽", text:"ドニゼッティ　死去　ベルガモ（梅毒）", person:null, country:"イタリア", type:"death" },
   { year:1848, date:"1月24日", cat:"美術", text:"スリコフ　生誕　クラスノヤルスク", person:null, country:"ロシア",  type:"birth" },
   { year:1848, date:"8月7日", cat:"科学技術", text:"死去", person:"イェンス・ヤコブ・ベルセリウス", nameAlt: "Jöns Jakob Berzelius", country:"スウェーデン", place:"ストックホルム", type:"death" },
 
   // ── 1849 ──
-  { year:1849, date:"2月9日",  cat:"政治（国際）", text:"ローマ共和国　樹立", person:null, country:"イタリア", type:"event" },
-  { year:1849, date:null, cat:"政治（国内）", text:"ペトラシェフスキー事件 — ペトラシェフスキー逮捕", person:null, country:"ロシア", type:"event" },
+  { year:1849, date:"2月9日",  cat:"国際政治", text:"ローマ共和国　樹立", person:null, country:"イタリア", type:"event" },
+  { year:1849, date:null, cat:"国内政治", text:"ペトラシェフスキー事件 — ペトラシェフスキー逮捕", person:null, country:"ロシア", type:"event" },
   { year:1849, date:null, cat:"文学", text:"メリメ（フランス）プーシキン『スペードの女王』翻訳", person:null, country:"フランス", type:"event" },
 
   // ── 1850 ──
-  { year:1850, date:"2月25日", cat:"政治（国際）", text:"道光帝　死去 / 咸豊帝　即位（清）", person:null, country:"清", type:"event" },
+  { year:1850, date:"2月25日", cat:"国際政治", text:"道光帝　死去 / 咸豊帝　即位（清）", person:null, country:"清", type:"event" },
   { year:1850, date:"5月9日", cat:"科学技術", text:"死去　化学者", person:"ジョセフ・ルイ・ゲー＝リュサック", nameAlt: "Joseph Louis Gay-Lussac", country:"フランス", place:"パリ", type:"death" },
   { year:1850, date:"8月26日", cat:"要人", text:"ルイ・フィリップ王　死去　イギリス", person:null, country:"フランス/イギリス", type:"death" },
   { year:1850, date:null, cat:"科学技術", text:"英国アイルランド磁気電信会社、創立", person:null, nameAlt: "British and Irish Magnetic Telegraph Company", country:"イギリス", place:null, type:"event" },
 
   // ── 1851 ──
-  { year:1851, date:null, cat:"政治（国内）", text:"ルイ・ナポレオンのクーデタ", person:null, country:"フランス", type:"event" },
-  { year:1851, date:null, cat:"政治（国際）", text:"万国博覧会（ロンドン）", person:null, country:"イギリス", type:"event" },
+  { year:1851, date:null, cat:"国内政治", text:"ルイ・ナポレオンのクーデタ", person:null, country:"フランス", type:"event" },
+  { year:1851, date:null, cat:"国際政治", text:"万国博覧会（ロンドン）", person:null, country:"イギリス", type:"event" },
   { year:1851, date:"3月11日", cat:"音楽", text:"ヴェルディ『リゴレット』ヴェネツィア・フェニーチェ座初演", person:"ジュゼッペ・ヴェルディ", country:"イタリア", type:"event" },
   { year:1851, date:"11月18日", cat:"美術", text:"死去", person:"ルイ・ジャック・マンデ・ダゲール", nameAlt: "Louis Jacques Mandé Daguerre", country:"フランス", place:"ヴァル＝ド＝マルヌ", type:"death" },
 
   // ── 1852 ──
-  { year:1852, date:null, cat:"政治（国内）", text:"ナポレオン三世即位（フランス）12月", person:null, country:"フランス", type:"event" },
+  { year:1852, date:null, cat:"国内政治", text:"ナポレオン三世即位（フランス）12月", person:null, country:"フランス", type:"event" },
   { year:1852, date:null, cat:"文学", text:"マルクス『ルイ・ボナパルトのブリュメール18日』", person:null, country:"ドイツ", type:"event" },
 
   // ── 1853 ──
-  { year:1853, date:null, cat:"政治（国内）",  text:"フランツ・ヨーゼフ帝暗殺未遂（ハンガリー人の仕立屋による）", person:null, country:"オーストリア", type:"event" },
+  { year:1853, date:null, cat:"国内政治",  text:"フランツ・ヨーゼフ帝暗殺未遂（ハンガリー人の仕立屋による）", person:null, country:"オーストリア", type:"event" },
   { year:1853, date:"12月18日",cat:"音楽", text:"サン＝サーンス『交響曲第一番』パリ初演", person:"カミーユ・サン＝サーンス", country:"フランス", type:"event" },
 
   // ── 1854 ──
   { year:1854, date:"1月1日", cat:"思想", text:"生誕（1941年没）　人類学者", person:"ジェイムズ・フレイザー", nameAlt: "James George Frazer", country:"イギリス", place:"グラスゴー", type:"birth" },
-  { year:1854, date:null, cat:"政治（国際）",  text:"クリミア戦争にイギリスフランス参戦", person:null, country:"イギリス/フランス/ロシア",   type:"event" },
+  { year:1854, date:null, cat:"国際政治",  text:"クリミア戦争にイギリスフランス参戦", person:null, country:"イギリス/フランス/ロシア",   type:"event" },
   { year:1854, date:"6月13日", cat:"音楽",text:"ヴェルディ『シチリアの晩鐘』ル・ペルティエ劇場初演", person:"ジュゼッペ・ヴェルディ", country:"フランス", type:"event" },
 
   // ── 1855 ──
-  { year:1855, date:null, cat:"政治（国際）", text:"万国博覧会（パリ）",person:null, country:"フランス", type:"event" },
+  { year:1855, date:null, cat:"国際政治", text:"万国博覧会（パリ）",person:null, country:"フランス", type:"event" },
   { year:1855, date:"9月16日", cat:"要人",  text:"ウヴァーロフ　死去　モスクワ",  person:null,  country:"ロシア",   type:"death" },
 
   // ── 1856 ──
-  { year:1856, date:"3月30日", cat:"政治（国内）", text:"アレクサンドル2世の演説 — 農奴制廃止が不可欠と公式表明", person:"アレクサンドル2世", country:"ロシア", type:"event" },
+  { year:1856, date:"3月30日", cat:"国内政治", text:"アレクサンドル2世の演説 — 農奴制廃止が不可欠と公式表明", person:"アレクサンドル2世", country:"ロシア", type:"event" },
   { year:1856, date:"2月17日", cat:"文学", text:"死去（梅毒？）　パリ",  person:"ハインリヒ・ハイネ", country:"ドイツ/フランス",  type:"death" },
-  { year:1856, date:"3月24日", cat:"政治（国際）", text:"タパタリ条約、締結　ネパール・チベット戦争の平和条約", person:null, nameAlt: "Treaty of Thapathali", country:"ネパール/チベット", place:"タパタリ宮殿", type:"event" },
+  { year:1856, date:"3月24日", cat:"国際政治", text:"タパタリ条約、締結　ネパール・チベット戦争の平和条約", person:null, nameAlt: "Treaty of Thapathali", country:"ネパール/チベット", place:"タパタリ宮殿", type:"event" },
   { year:1856, date:"5月", cat:"音楽", text:"ダルゴムィシスキー『ルサルカ』ペテルブルク・サーカス座初演", person:null, country:"ロシア",         type:"event" },
 
   // ── 1857 ──
@@ -419,15 +419,15 @@ const EVENTS = [
   { year:1857, date:null, cat:"文学", text:"トマス・ヒューズ『トム・ブラウンの学校生活』", person:null, country:"イギリス", type:"event" },
 
   // ── 1858 ──
-  { year:1858, date:null,  cat:"政治（国内）", text:"ナポレオン三世暗殺未遂（オルシーニ事件）", person:null, country:"フランス", type:"event" },
-  { year:1858, date:null, cat:"政治（国際）", text:"プロンビエール密約（フランス・イタリア）カヴールとナポレオン三世", person:null,  country:"フランス/イタリア", type:"event" },
+  { year:1858, date:null,  cat:"国内政治", text:"ナポレオン三世暗殺未遂（オルシーニ事件）", person:null, country:"フランス", type:"event" },
+  { year:1858, date:null, cat:"国際政治", text:"プロンビエール密約（フランス・イタリア）カヴールとナポレオン三世", person:null,  country:"フランス/イタリア", type:"event" },
   { year:1858, date:null, cat:"文学", text:"ボードレール『悪の華』刊行", person:null, country:"フランス", type:"event" },
   { year:1858, date:"10月3日", cat:"舞台芸術", text:"生誕　ロンバルディア", person:"エレオノーラ・ドゥーゼ", country:"イタリア", type:"birth" },
   { year:1856, date:null, cat:"科学技術", text:"モーヴの合成染料（最初の合成染料）を発明", person:"ウィリアム＝ヘンリー・パーキン", nameAlt: "William Henry Perkin", country:"イギリス", place:"ロンドン", type:"event" },
 
   // ── 1859 ──
-  { year:1859, date:null, cat:"政治（国内）", text:"禁酒運動（ロシア）5月〜", person:null, country:"ロシア", type:"event" },
-  { year:1859, date:null, cat:"政治（国際）", text:"第二次ドイツ立戦争（イタリアVSオーストリア）", person:null, country:"イタリア/オーストリア", type:"event" },
+  { year:1859, date:null, cat:"国内政治", text:"禁酒運動（ロシア）5月〜", person:null, country:"ロシア", type:"event" },
+  { year:1859, date:null, cat:"国際政治", text:"第二次ドイツ立戦争（イタリアVSオーストリア）", person:null, country:"イタリア/オーストリア", type:"event" },
   { year:1859, date:"3月19日", cat:"音楽", text:"グノー『ファウスト』パリ・リリック座初演", person:null, country:"フランス", type:"event"},
   { year:1859, date:"4月8日", cat:"思想", text:"フッサール　生誕　モラヴィア", person:null, country:"オーストリア", type:"birth" },
   { year:1859, date:"10月18日", cat:"思想", text:"生誕（1941年没）", person:"アンリ・ベルクソン", nameAlt: "Henri Bergson", country:"フランス", place:"パリ", type:"birth" },
@@ -443,25 +443,25 @@ const EVENTS = [
   { year:1860, date:null, cat:"科学技術", text:"『力と物質』出版（Richard Griffin and Co.より）", person:"マイケル・ファラデー", nameAlt: "Michael Faraday", country:"イギリス", place:null, type:"event" },
 
   // ── 1861 ──
-  { year:1861, date:null, cat:"政治（国際）", text:"アメリカ南北戦争勃発（〜1865年）",  person:null, country:"アメリカ", type:"event" },
+  { year:1861, date:null, cat:"国際政治", text:"アメリカ南北戦争勃発（〜1865年）",  person:null, country:"アメリカ", type:"event" },
   { year:1861, date:"2月20日", cat:"文学", text:"ウジェーヌ・スクリーブ　死去　パリ", person:null, country:"フランス", type:"death" },
   { year:1861, date:"4月19日", cat:"科学技術", text:"死去　軍事技術者、火薬の権威", person:"チャールズ＝ウィリアム・パスレー", nameAlt: "Charles William Pasley", country:"イギリス", place:"ロンドン", type:"death" },
   { year:1861, date:null, cat:"科学技術", text:"『ロウソクの科学』（Griffin, Bohn and Co.より）", person:"マイケル・ファラデー",  nameAlt: "Michael Faraday", country:"イギリス", place:"", type:"event" },
   { year:1861, date:null, cat:"科学技術", text:"新元素タリウムを発見", person:"ウィリアム・クルックス", nameAlt: "William Crookes", country:"イギリス", place:null, type:"event" },
 
   // ── 1862 ──
-  { year:1862, date:null, cat:"政治（国際）",  text:"万国博覧会（ロンドン）", person:null, country:"イギリス", type:"event" },
+  { year:1862, date:null, cat:"国際政治",  text:"万国博覧会（ロンドン）", person:null, country:"イギリス", type:"event" },
   { year:1862, date:"1月18日", cat:"舞台芸術", text:"プティパ振付『ファラオの娘』ボリショイ・カーメンヌィ劇場初演", person:null, country:"ロシア", type:"event" },
   { year:1862, date:"2月17日", cat:"文学", text:"森鴎外　生誕　石見（島根）", person:null, country:"日本", type:"birth" },
 
   // ── 1863 ──
   { year:1863, date:"1月17日", cat:"舞台芸術", text:"生誕　モスクワ", person:"コンスタンティン・スタニスラフスキー", country:"ロシア", type:"birth" },
-  { year:1863, date:"1月23日", cat:"政治（国内）", text:"ポーランド蜂起", person:null, country:"ロシア", type:"event" },
+  { year:1863, date:"1月23日", cat:"国内政治", text:"ポーランド蜂起", person:null, country:"ロシア", type:"event" },
   { year:1863, date:"7月30日", cat:"社会", text:"生誕（1947年没）", person:"ヘンリー・フォード", nameAlt: "Henry Ford", country:"アメリカ", place:"ミシガン", type:"birth" },
 
   // ── 1864 ──
-  { year:1864, date:"3月10日", cat:"政治（国内）", text:"ルートヴィヒ2世　即位（バイエルン）", person:null, country:"ドイツ", type:"event" },
-  { year:1864, date:"2月1日～", cat:"政治（国際）", text:"第2次シュレースヴィ戦争",  person:null, country:"デンマーク/普",type:"event"},
+  { year:1864, date:"3月10日", cat:"国内政治", text:"ルートヴィヒ2世　即位（バイエルン）", person:null, country:"ドイツ", type:"event" },
+  { year:1864, date:"2月1日～", cat:"国際政治", text:"第2次シュレースヴィ戦争",  person:null, country:"デンマーク/普",type:"event"},
   { year:1864, date:"5月2日",  cat:"音楽", text:"マイアベーア　死去　パリ",   person:null, country:"ドイツ/フランス",  type:"death" },
   { year:1864, date:"5月15日", cat:"美術", text:"生誕", person:"ヴィルヘルム・ハマスホイ", country:"デンマーク", place: "コペンハーゲン", type:"birth" },
   { year:1864, date:"8月31日", cat:"思想", text:"死去（決闘）", person:"フェルディナント・ラッサール", nameAlt: "Ferdinand Johann Gottlieb Lassalle", country:"スイス", place:"カルージュ", type:"death" },
@@ -473,19 +473,19 @@ const EVENTS = [
   { year:1865, date:"1月23日", cat:"要人", text:"　死去（大動脈解離）", person:"アルセーニー・アンドレーヴィチ・ザクレフスキー伯", country:"イタリア", place:"フィレンツェ",  type:"death" },
     { year:1786, date:"3月26日", cat:"科学技術", text:"死去　発明家", person:"トーマス・ハンコック", nameAlt: "Thomas Hancock", country:"イギリス", place:"ロンドン", type:"death" },
   { year:1865, date:"4月1日",   cat:"社会", text:"ローマ＝オルテ間　鉄道開通", person:null, country:"イタリア", place:null,  type:"event" },
-  { year:1865, date:"4月15日", cat:"政治（国際）", text:"エイブラハム・リンカーン暗殺", person:null, country:"アメリカ", type:"death" },
+  { year:1865, date:"4月15日", cat:"国際政治", text:"エイブラハム・リンカーン暗殺", person:null, country:"アメリカ", type:"death" },
   { year:1865, date:"4月24日", cat:"要人",  text:"死去（結核性髄膜炎）", person:"ニコライ・アレクサンドロヴィチ",  country:"フランス", place: "ニース", type:"death" },
   { year:1865, date:"6月9日",  cat:"音楽", text:"生誕　ノーレ・リュンデルセ", person:"カール・ニールセン", country:"デンマーク", type:"birth" },
   { year:1865, date:"6月10日", cat:"音楽", text:"ワーグナー『トリスタンとイゾルデ』バイエルン宮廷歌劇場初演",  person:null, country:"ドイツ", type:"event" },
-  { year:1865, date:null, cat:"政治（国際）", text:"コーカンド汗国首都タシケント陥落（ロシア）", person:null, country:"ロシア", type:"event" },
-  { year:1865, date:null, cat:"政治（国内）", text:"大臣委員会の議長職が独立", person:null, country:"ロシア",place:null,  type:"event" },
-  { year:1865, date:null, cat:"医学・科学", text:"クロード・ベルナール『実験医学序説』", person:null, country:"フランス", place:null, type:"event" },
-  { year:1865, date:null, cat:"新聞・雑誌", text:"初のハワイ語＝英語辞書　完成", person:null, country:"アメリカ", place:"ハワイ", type:"event" },
+  { year:1865, date:null, cat:"国際政治", text:"コーカンド汗国首都タシケント陥落（ロシア）", person:null, country:"ロシア", type:"event" },
+  { year:1865, date:null, cat:"国内政治", text:"大臣委員会の議長職が独立", person:null, country:"ロシア",place:null,  type:"event" },
+  { year:1865, date:null, cat:"科学技術", text:"クロード・ベルナール『実験医学序説』", person:null, country:"フランス", place:null, type:"event" },
+  { year:1865, date:null, cat:"メディア", text:"初のハワイ語＝英語辞書　完成", person:null, country:"アメリカ", place:"ハワイ", type:"event" },
 
   // ── 1866 ──
-  { year:1866, date:null, cat:"政治（国内）", text:"アブハジアで大規模農民蜂起",  person:null,  country:"ロシア", type:"event" },
+  { year:1866, date:null, cat:"国内政治", text:"アブハジアで大規模農民蜂起",  person:null,  country:"ロシア", type:"event" },
   { year:1866, date:"3月6日", cat:"思想", text:"死去　神学者・哲学者・歴史家", person:"ウィリアム・ヒューウェル", nameAlt: "William Whewell", country:"イギリス", place:"ケンブリッジ", type:"death" },
-  { year:1866, date:"4月～", cat:"政治（国際）", text:"プロイセン・イタリアの同盟", person:null, country:"プロイセン/イタリア", type:"event" },
+  { year:1866, date:"4月～", cat:"国際政治", text:"プロイセン・イタリアの同盟", person:null, country:"プロイセン/イタリア", type:"event" },
   { year:1866, date:"10月", cat:"音楽",  text:"ブラームス『弦楽六重奏曲第二番』ボストン初演",  person:null, country:"アメリカ", place: "ボストン", type:"event" },
   { year:1866, date:"2月5日", cat:"舞台芸術", text:"オッフェンバック『青ひげ』ヴァリエテ座初演", person:null, country:"フランス", place: "パリ", type:"event" },
 
@@ -575,7 +575,7 @@ const EVENTS = [
   { year:1908, date:"", cat:"社会", text:"自動車「フォードT型」、発売", person:"フォード・モーター社", nameAlt: "[Ford Motor Company]", country:"アメリカ", place:"ミシガン", type:"event" },
 
   // ―― 1910 ――
-  { year:1910, date:"2月9日", cat:"", text:"生誕（1976年没）　分子生物学者", person:"ジャック・モノー", nameAlt: "Jacques Monod", country:"フランス", place:"パリ", type:"birth" },
+  { year:1910, date:"2月9日", cat:"科学技術", text:"生誕（1976年没）　分子生物学者", person:"ジャック・モノー", nameAlt: "Jacques Monod", country:"フランス", place:"パリ", type:"birth" },
   { year:1910, date:"8月26日", cat:"宗教", text:"生誕（1997年没）", person:"マザー・テレサ", nameAlt: "Mother Teresa", country:"北マケドニア", place:"スコピエ", type:"birth" },
 
   // ―― 1911 ――
@@ -583,7 +583,7 @@ const EVENTS = [
   { year:1842, date:"11月26日", cat:"思想", text:"死去（自死）", person:"ポール・ラファルグ", nameAlt: "Paul Lafargue", country:"フランス", place:"ドラヴェイユ", type:"death" },
 
   // ―― 1913 ――
-  { year:1913, date:"1月11日", cat:"政治（国際）", text:"蒙蔵条約、締結　チベット・モンゴル相互承認条約", person:null, nameAlt: "Монгол-Төвөдийн гэрээ", country:"モンゴル/チベット", place:"ウルガ", type:"event" },
+  { year:1913, date:"1月11日", cat:"国際政治", text:"蒙蔵条約、締結　チベット・モンゴル相互承認条約", person:null, nameAlt: "Монгол-Төвөдийн гэрээ", country:"モンゴル/チベット", place:"ウルガ", type:"event" },
 
   // ―― 1914 ――
   { year:1914, date:"5月27日", cat:"科学技術", text:"死去　発明家", person:"ジョゼフ・ウィルソン・スワン", nameAlt: "Joseph Wilson Swan", country:"イギリス", place:"ウォーリンガム", type:"death" },

@@ -614,11 +614,11 @@ body {
     <div class="sb-section">
       <div class="sb-label">カテゴリ</div>
       <button class="sb-btn active" onclick="filterCat('all', this)">　すべて</button>
-      <button class="sb-btn" onclick="filterCat('政治（国内）', this)">
-        <span class="sb-dot" style="background:var(--cat-politicsdm)"></span>政治（国内）
+      <button class="sb-btn" onclick="filterCat('国内政治', this)">
+        <span class="sb-dot" style="background:var(--cat-politicsdm)"></span>国内政治
       </button>
-      <button class="sb-btn" onclick="filterCat('政治（国際）', this)">
-       <span class="sb-dot" style="background:var(--cat-politicsin)"></span>政治（国際）
+      <button class="sb-btn" onclick="filterCat('国際政治', this)">
+       <span class="sb-dot" style="background:var(--cat-politicsin)"></span>国際政治
       </button>
       <button class="sb-btn" onclick="filterCat('法', this)">
         <span class="sb-dot" style="background:var(--cat-law)"></span>法
@@ -775,8 +775,8 @@ const countryColor = {
 };
 
 const catColor = {
-  '政治（国内）': 'var(--cat-politicsdm)',
-  '政治（国際）': 'var(--cat-politicsin)',
+  '国内政治': 'var(--cat-politicsdm)',
+  '国際政治': 'var(--cat-politicsin)',
   '法': 'var(--cat-law)',
   '要人': 'var(--cat-politician)',
   '社会': 'var(--cat-society)',
