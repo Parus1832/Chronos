@@ -513,6 +513,70 @@ body {
   margin-top: 5px;
 }
 
+/* ══ HAMBURGER ══ */
+#hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+}
+#hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+/* ══ OVERLAY ══ */
+#sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 149;
+}
+
+/* ══ MOBILE ══ */
+@media (max-width: 700px) {
+  #hamburger { display: flex; }
+
+  .logo-sub { display: none; }
+
+  .search-wrap { width: 140px; }
+
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 220px;
+    height: 100vh;
+    z-index: 150;
+    transition: left 0.25s ease;
+    padding-top: 60px;
+  }
+  #sidebar.open { left: 0; }
+  #sidebar-overlay.open { display: block; }
+
+  #table-view { padding: 8px; }
+
+  .db-table th, .db-table td { padding: 5px 6px; font-size: 13px; }
+  .cell-date { display: none; }
+  .cell-country { display: none; }
+  .cell-content { max-width: 200px; }
+
+  .tl-card { width: 160px; font-size: 12px; }
+
+  #person-view { padding: 16px; }
+  .person-name { font-size: 22px; }
+
+  .persons-grid { grid-template-columns: 1fr 1fr; }
+}
+
 /* ══ SCROLLBAR ══ */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -522,6 +586,9 @@ body {
 <body>
 
 <header id="app-header">
+  <button id="hamburger" onclick="toggleSidebar()" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
   <div>
     <span class="logo">Chronos</span>
     <span class="logo-sub">19世紀年表</span>
@@ -533,6 +600,7 @@ body {
   </div>
 </header>
 
+<div id="sidebar-overlay" onclick="toggleSidebar()"></div>
 <div id="layout">
 
   <!-- SIDEBAR -->
@@ -682,6 +750,12 @@ body {
 
 <script src="data.chronos.js"></script>
 <script>
+// ══ SIDEBAR TOGGLE ══
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebar-overlay').classList.toggle('open');
+}
+
 // ══ STATE ══
 let currentView = 'table';
 let previousView = 'table'; //
@@ -732,7 +806,7 @@ function getFiltered() {
     if (filterState.type !== 'all' && e.type !== filterState.type) return false;
     if (filterState.search) {
       const q = filterState.search.toLowerCase();
-      const hay = [e.text, e.country, String(e.year), e.date || ''].join(' ').toLowerCase();
+      const hay = [e.text, e.country, String(e.year), e.date || '', e.person ? (Array.isArray(e.person) ? e.person.join(' ') : e.person) : ''].join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
