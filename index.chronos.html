@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chronos — 19世紀年表</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #1a1710;
+  --bg2:       #211f18;
+  --bg3:       #2a2820;
+  --surface:   #2f2c22;
+  --border:    #3d3a2e;
+  --border2:   #4a4638;
+  --text:      #e8e0cc;
+  --text-dim:  #a09880;
+  --text-faint:#6a6050;
+  --gold:      #c9a84c;
+  --gold-dim:  #8a6e2e;
+
+  /* カテゴリカラー */
+  --cat-politicsdm:  #b0c4de;
+  --cat-politicsin:  #009EDB;
+  --cat-politician:  #008080;
+  --cat-law:         #2e8b57;
+  --cat-society:     #a0522d;
+  --cat-religion:    #ffb6c1; 
+  --cat-philosophy:  #87cefa;
+  --cat-literature:  #8fbc8f;
+  --cat-music:       #f4a460;
+  --cat-stage:       #ffffe0;
+  --cat-art:         #800080;
+  --cat-science:     #191970;
+  --cat-media:       #d2b48c;
+
+  /* 国カラー — 光文社古典新訳文庫準拠 */
+  --c-russia:  #e8822a;
+  --c-uk:      #7bc47a;
+  --c-france:  #6ab4d4;
+  --c-italy:   #4a7fc4;
+  --c-germany: #d4c84a;
+  --c-austria: #c4a020;
+  --c-usa:     #4aaa6a;
+  --c-ottoman: #d46a20;
+  --c-denmark: #d45050;
+  --c-other:   #909090;
+
+  /* 出来事タイプ */
+  --ev-birth:  #5a9fd4;
+  --ev-death:  #a06aaa;
+  --ev-normal: #c8c0a8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'EB Garamond', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ══ HEADER ══ */
+#app-header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.logo {
+  font-family: 'EB Garamond', serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  font-style: italic;
+}
+.logo-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--text-faint);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-left: 2px;
+}
+.header-sep { flex: 1; }
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: 220px;
+}
+.search-wrap input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  color: var(--text);
+  width: 100%;
+}
+.search-wrap input::placeholder { color: var(--text-faint); }
+.search-icon { color: var(--text-faint); font-size: 13px; }
+
+/* ══ LAYOUT ══ */
+#layout {
+  display: flex;
+  min-height: calc(100vh - 52px);
+}
+
+/* ══ SIDEBAR ══ */
+#sidebar {
+  width: 188px;
+  flex-shrink: 0;
+  background: var(--bg2);
+  border-right: 1px solid var(--border);
+  padding: 16px 0;
+  position: sticky;
+  top: 52px;
+  height: calc(100vh - 52px);
+  overflow-y: auto;
+}
+.sb-section { padding: 0 12px 20px; }
+.sb-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+.sb-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px 8px;
+  border: none;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  color: var(--text-dim);
+  text-align: left;
+  transition: all 0.12s;
+  margin-bottom: 1px;
+}
+.sb-btn:hover { background: var(--bg3); color: var(--text); }
+.sb-btn.active { background: var(--surface); color: var(--text); }
+.sb-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* ══ MAIN ══ */
+#main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ══ TOOLBAR ══ */
+#toolbar {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.view-tab {
+  padding: 6px 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  color: var(--text-dim);
+  border-radius: 3px;
+  transition: all 0.12s;
+}
+.view-tab:hover { color: var(--text); background: var(--bg3); }
+.view-tab.active { color: var(--gold); background: var(--bg3); }
+.tb-sep { flex: 1; }
+.record-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--text-faint);
+}
+
+/* ══ TABLE VIEW ══ */
+#table-view {
+  overflow-x: auto;
+  padding: 16px 20px;
+}
+.db-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.db-table th {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 7px 10px;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  white-space: nowrap;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+.db-table td {
+  border: 1px solid var(--border);
+  padding: 7px 10px;
+  vertical-align: top;
+}
+.db-table tr:hover td { background: rgba(255,255,255,0.03); }
+
+.cell-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--gold);
+  white-space: nowrap;
+  width: 48px;
+}
+.cell-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--text-faint);
+  white-space: nowrap;
+  width: 64px;
+}
+.cell-cat {
+  width: 72px;
+}
+.cell-content { line-height: 1.6; max-width: 300px; }
+.cell-country { width: 180px; }
+
+.cat-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  background: var(--bg3);
+  color: var(--text-dim);
+  border: 1px solid var(--border2);
+}
+
+.person-link {
+  color: var(--gold);
+  cursor: pointer;
+  border-bottom: 1px solid var(--gold-dim);
+  transition: color 0.12s, border-color 0.12s;
+  font-style: italic;
+}
+.person-link:hover { color: #e8c870; border-bottom-color: #e8c870; }
+
+.ev-birth  { color: var(--ev-birth); }
+.ev-death  { color: var(--ev-death); }
+.ev-normal { color: var(--ev-normal); }
+
+.country-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ══ PERSON PAGE ══ */
+#person-view {
+  display: none;
+  padding: 32px 40px;
+  max-width: 860px;
+}
+.person-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-faint);
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 24px;
+  transition: color 0.12s;
+  border: none;
+  background: transparent;
+  font-family: 'Noto Serif JP', serif;
+}
+.person-back:hover { color: var(--gold); }
+
+.person-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.person-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.person-name-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+.person-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.person-section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+  margin-bottom: 12px;
+  margin-top: 28px;
+}
+
+.person-bio {
+  color: var(--text-dim);
+  line-height: 1.85;
+  font-size: 16px;
+}
+
+.person-events-list { list-style: none; }
+.person-event-item {
+  display: flex;
+  gap: 14px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.pev-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--text-faint);
+  white-space: nowrap;
+  width: 120px;
+  flex-shrink: 0;
+}
+.pev-cat {
+  width: 180px;
+  flex-shrink: 0;
+}
+.pev-text { color: var(--text-dim); line-height: 1.6; width: 260px; display: inline-block; }
+
+/* ══ PERSON LIST VIEW ══ */
+#persons-view {
+  display: none;
+  padding: 20px;
+}
+.persons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.person-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.person-card:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg3);
+}
+.pc-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.pc-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--text-faint);
+}
+.pc-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* ══ TIMELINE VIEW ══ */
+#timeline-view {
+  display: none;
+  padding: 28px 32px;
+  overflow-x: auto;
+}
+.tl-container {
+  position: relative;
+  padding-left: 72px;
+}
+.tl-axis {
+  position: absolute;
+  left: 44px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border2);
+}
+.tl-year-group { margin-bottom: 4px; }
+.tl-year-marker {
+  position: relative;
+  height: 24px;
+  margin-bottom: 10px;
+}
+.tl-year-label {
+  position: absolute;
+  left: -70px;
+  top: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13x;
+  color: var(--gold);
+  width: 56px;
+  text-align: right;
+  letter-spacing: 0.04em;
+}
+.tl-year-dot {
+  position: absolute;
+  left: -70px;
+  top: 10px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--gold-dim);
+}
+.tl-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 18px;
+}
+.tl-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 13px;
+  width: 240px;
+  font-size: 16px;
+  line-height: 1.65;
+  transition: border-color 0.15s, background 0.15s;
+  cursor: default;
+}
+.tl-card:hover {
+  background: var(--bg3);
+  border-color: var(--border2);
+}
+.tl-card-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.tl-card-text { color: var(--text-dim); }
+.tl-card-text .person-link { font-size: 16px; }
+.tl-card-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--text-faint);
+  margin-top: 5px;
+}
+
+/* ══ SCROLLBAR ══ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<header id="app-header">
+  <div>
+    <span class="logo">Chronos</span>
+    <span class="logo-sub">19世紀年表</span>
+  </div>
+  <div class="header-sep"></div>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="人名・出来事・国を検索…" oninput="onSearch(this.value)">
+  </div>
+</header>
+
+<div id="layout">
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar">
+    <div class="sb-section">
+      <div class="sb-label">表示</div>
+      <button class="sb-btn active" onclick="switchView('table')">⊞ 年表</button>
+      <button class="sb-btn active" onclick="switchView('timeline')">∥ タイムライン</button>
+      <button class="sb-btn" onclick="switchView('persons')">◉ 人物一覧</button>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-label">カテゴリ</div>
+      <button class="sb-btn active" onclick="filterCat('all', this)">　すべて</button>
+      <button class="sb-btn" onclick="filterCat('政治（国内）', this)">
+        <span class="sb-dot" style="background:var(--cat-politicsdm)"></span>政治（国内）
+      </button>
+      <button class="sb-btn" onclick="filterCat('政治（国際）', this)">
+       <span class="sb-dot" style="background:var(--cat-politicsin)"></span>政治（国際）
+      </button>
+      <button class="sb-btn" onclick="filterCat('法', this)">
+        <span class="sb-dot" style="background:var(--cat-law)"></span>法
+      </button>
+      <button class="sb-btn" onclick="filterCat('要人', this)">
+        <span class="sb-dot" style="background:var(--cat-politician)"></span>要人
+      </button>
+      <button class="sb-btn" onclick="filterCat('社会', this)">
+        <span class="sb-dot" style="background:var(--cat-society)"></span>社会
+      </button>
+       <button class="sb-btn" onclick="filterCat('宗教', this)">
+        <span class="sb-dot" style="background:var(--cat-religion)"></span>宗教
+      </button>
+      <button class="sb-btn" onclick="filterCat('思想', this)">
+        <span class="sb-dot" style="background:var(--cat-philosophy)"></span>思想
+      </button>
+      <button class="sb-btn" onclick="filterCat('文学', this)">
+        <span class="sb-dot" style="background:var(--cat-literature)"></span>文学
+      </button>
+      <button class="sb-btn" onclick="filterCat('音楽', this)">
+        <span class="sb-dot" style="background:var(--cat-music)"></span>音楽
+      </button>
+      <button class="sb-btn" onclick="filterCat('舞台芸術', this)">
+        <span class="sb-dot" style="background:var(--cat-stage)"></span>舞台芸術
+      </button>
+      <button class="sb-btn" onclick="filterCat('美術', this)">
+        <span class="sb-dot" style="background:var(--cat-art)"></span>美術
+      </button>
+      <button class="sb-btn" onclick="filterCat('科学技術', this)">
+        <span class="sb-dot" style="background:var(--cat-science)"></span>科学技術
+      </button>
+       <button class="sb-btn" onclick="filterCat('メディア', this)">
+        <span class="sb-dot" style="background:var(--cat-media)"></span>メディア
+      </button>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-label">国・地域</div>
+      <button class="sb-btn" onclick="filterCountry('all', this)">　すべて</button>
+      <button class="sb-btn" onclick="filterCountry('ロシア', this)">
+        <span class="sb-dot" style="background:var(--c-russia)"></span>ロシア
+      </button>
+      <button class="sb-btn" onclick="filterCountry('イギリス', this)">
+        <span class="sb-dot" style="background:var(--c-uk)"></span>イギリス
+      </button>
+      <button class="sb-btn" onclick="filterCountry('フランス', this)">
+        <span class="sb-dot" style="background:var(--c-france)"></span>フランス
+      </button>
+      <button class="sb-btn" onclick="filterCountry('イタリア', this)">
+        <span class="sb-dot" style="background:var(--c-italy)"></span>イタリア
+      </button>
+      <button class="sb-btn" onclick="filterCountry('ドイツ', this)">
+        <span class="sb-dot" style="background:var(--c-germany)"></span>ドイツ
+      </button>
+      <button class="sb-btn" onclick="filterCountry('オーストリア', this)">
+        <span class="sb-dot" style="background:var(--c-austria)"></span>オーストリア
+      </button>
+      <button class="sb-btn" onclick="filterCountry('アメリカ', this)">
+        <span class="sb-dot" style="background:var(--c-usa)"></span>アメリカ
+      </button>
+      <button class="sb-btn" onclick="filterCountry('デンマーク', this)">
+        <span class="sb-dot" style="background:var(--c-denmark)"></span>デンマーク
+      </button>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-label">出来事タイプ</div>
+      <button class="sb-btn" onclick="filterType('all', this)">　すべて</button>
+      <button class="sb-btn" onclick="filterType('birth', this)">
+        <span class="sb-dot" style="background:var(--ev-birth)"></span>生誕
+      </button>
+      <button class="sb-btn" onclick="filterType('death', this)">
+        <span class="sb-dot" style="background:var(--ev-death)"></span>死去
+      </button>
+      <button class="sb-btn" onclick="filterType('event', this)">
+        <span class="sb-dot" style="background:var(--ev-normal)"></span>出来事
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main id="main">
+    <div id="toolbar">
+      <button class="view-tab active" id="tab-table" onclick="switchView('table')">年表</button>
+      <button class="view-tab" id="tab-timeline" onclick="switchView('timeline')">タイムライン</button>
+      <button class="view-tab" id="tab-persons" onclick="switchView('persons')">人物一覧</button>
+      <div class="tb-sep"></div>
+      <span class="record-count" id="record-count"></span>
+    </div>
+
+    <!-- TABLE VIEW -->
+    <div id="table-view">
+      <table class="db-table">
+        <thead>
+          <tr>
+            <th>年</th>
+            <th>月日</th>
+            <th>カテゴリ</th>
+            <th>出来事・人物</th>
+            <th>地域</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+    <!-- PERSONS LIST VIEW -->
+    <div id="persons-view">
+      <div class="persons-grid" id="persons-grid"></div>
+    </div>
+
+    <!-- TIMELINE VIEW -->
+    <div id="timeline-view">
+      <div class="tl-container">
+        <div class="tl-axis"></div>
+        <div id="timeline-body"></div>
+      </div>
+    </div>
+
+    <!-- PERSON DETAIL VIEW -->
+    <div id="person-view">
+      <button class="person-back" onclick="backToTable()">← 年表に戻る</button>
+      <div id="person-content"></div>
+    </div>
+
+  </main>
+</div>
+
+<script src="data.chronos.js"></script>
+<script>
+// ══ STATE ══
+let currentView = 'table';
+let previousView = 'table'; //
+let savedScrollY = 0;
+let filterState = { cat: 'all', country: 'all', type: 'all', search: '' };
+
+// ══ COUNTRY COLOR MAP ══
+const countryColor = {
+  'ロシア': 'var(--c-russia)',
+  'イギリス': 'var(--c-uk)',
+  'フランス': 'var(--c-france)',
+  'イタリア': 'var(--c-italy)',
+  'ドイツ': 'var(--c-germany)',
+  'オーストリア': 'var(--c-austria)',
+  'アメリカ': 'var(--c-usa)',
+  'オスマン': 'var(--c-ottoman)',
+  'デンマーク': 'var(--c-denmark)',
+};
+
+const catColor = {
+  '政治（国内）': 'var(--cat-politicsdm)',
+  '政治（国際）': 'var(--cat-politicsin)',
+  '法': 'var(--cat-law)',
+  '要人': 'var(--cat-politician)',
+  '社会': 'var(--cat-society)',
+  '宗教': 'var(--cat-religion)',
+  '思想': 'var(--cat-philosophy)',
+  '文学': 'var(--cat-literature)',
+  '音楽': 'var(--cat-music)',
+  '舞台芸術': 'var(--cat-stage)',
+  '美術': 'var(--cat-art)',
+  '科学技術': 'var(--cat-science)',
+  'メディア': 'var(--cat-media)',
+}
+
+function getCountryColor(c) {
+  for (const [k, v] of Object.entries(countryColor)) {
+    if (c && c.includes(k)) return v;
+  }
+  return 'var(--c-other)';
+}
+
+// ══ FILTER ══
+function getFiltered() {
+  return EVENTS.filter(e => {
+    if (filterState.cat !== 'all' && e.cat !== filterState.cat) return false;
+    if (filterState.country !== 'all' && !(e.country && e.country.includes(filterState.country))) return false;
+    if (filterState.type !== 'all' && e.type !== filterState.type) return false;
+    if (filterState.search) {
+      const q = filterState.search.toLowerCase();
+      const hay = [e.text, e.country, String(e.year), e.date || ''].join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function filterCat(val, btn) {
+  filterState.cat = val;
+  highlightBtn(btn, '.sb-section:nth-child(2) .sb-btn');
+  render();
+}
+function filterCountry(val, btn) {
+  filterState.country = val;
+  highlightBtn(btn, '.sb-section:nth-child(3) .sb-btn');
+  render();
+}
+function filterType(val, btn) {
+  filterState.type = val;
+  highlightBtn(btn, '.sb-section:nth-child(4) .sb-btn');
+  render();
+}
+function onSearch(val) {
+  filterState.search = val;
+  render();
+}
+function highlightBtn(btn, selector) {
+  if (!btn) return;
+  document.querySelectorAll(selector).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// ══ RENDER TABLE ══
+function renderTable(data) {
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = data.map(e => {
+    const color = getCountryColor(e.country);
+    const textClass = e.type === 'birth' ? 'ev-birth' : e.type === 'death' ? 'ev-death' : 'ev-normal';
+    const textContent = (Array.isArray(e.person) ? e.person : e.person ? [e.person] : [])
+     .map(p => `<span class="person-link" onclick="showPerson('${p.replace(/'/g,"\\'")}')"><em>${p}</em></span>`)
+     .join('・') + (e.person ? '　' : '') + `<span class="${textClass}">${e.text}</span>`
+    return `<tr>
+      <td class="cell-year">${e.year}</td>
+      <td class="cell-date">${e.date || '<span style="color:var(--text-faint);font-style:italic">不明</span>'}</td>
+      <td class="cell-cat"><span class="cat-badge" style="border-color:${catColor[e.cat] || 'var(--border2)'};">${e.cat}</span></td>
+      <td class="cell-content">${textContent}</td>
+      <td class="cell-country">
+        <span class="country-dot" style="background:${color}"></span>
+        <span style="color:var(--text-faint);font-size:16px">${e.country || ''}</span>
+      </td>
+    </tr>`;
+  }).join('');
+  document.getElementById('record-count').textContent = `${data.length} 件`;
+}
+
+// ══ RENDER TIMELINE ══
+function renderTimeline(data) {
+  const body = document.getElementById('timeline-body');
+  const byYear = {};
+  data.forEach(e => {
+    if (!byYear[e.year]) byYear[e.year] = [];
+    byYear[e.year].push(e);
+  });
+  body.innerHTML = Object.keys(byYear).sort((a,b) => a-b).map(y => {
+    const events = byYear[y].map(e => {
+      const catBorderColor = catColor[e.cat] || 'var(--border2)';
+      const textClass = e.type === 'birth' ? 'ev-birth' : e.type === 'death' ? 'ev-death' : 'ev-normal';
+      const textContent = (Array.isArray(e.person) ? e.person : e.person ? [e.person] : [])
+      .map(p => `<span class="person-link" onclick="showPerson('${p.replace(/'/g,"\\'")}')"><em>${p}</em></span>`)
+      .join('・') + (e.person ? '　' : '') + `<span class="${textClass}">${e.text}</span>`
+      return `<div class="tl-card">
+        <div class="tl-card-top">
+          <span class="cat-badge" style="border-color:${catBorderColor}">${e.cat}</span>
+        </div>
+        <div class="tl-card-text">${textContent}</div>
+        <div class="tl-card-date">${e.date || '日付不明'}　${e.country || ''}${e.place ? ', ' + e.place : ''}</div>
+      </div>`;
+    }).join('');
+    return `<div class="tl-year-group">
+      <div class="tl-year-marker">
+        <div class="tl-year-label">${y}</div>
+        <div class="tl-year-dot"></div>
+      </div>
+      <div class="tl-events">${events}</div>
+    </div>`;
+  }).join('');
+}
+
+// ══ RENDER PERSONS GRID ══
+function renderPersonsGrid() {
+  const grid = document.getElementById('persons-grid');
+  grid.innerHTML = Object.entries(PERSONS).map(([name, p]) => {
+    const color = getCountryColor(p.country);
+    return `<div class="person-card" onclick="showPerson('${name.replace(/'/g,"\\'")}')">
+      <div class="pc-name">${name}</div>
+      <div class="pc-meta">
+        <span class="pc-dot" style="background:${color}"></span>
+        ${p.born || ''} ${p.country ? `· ${p.country}` : ''}
+      </div>
+      <div class="pc-meta" style="margin-top:4px;color:var(--text-dim)">${p.cat || ''}</div>
+    </div>`;
+  }).join('');
+}
+
+// ══ SHOW PERSON ══
+function showPerson(name) {
+  const p = PERSONS[name];
+  if (!p) return;
+
+  previousView = currentView; //
+  savedScrollY = window.scrollY;
+  currentView = 'person';
+  document.getElementById('table-view').style.display = 'none';
+  document.getElementById('persons-view').style.display = 'none';
+  document.getElementById('timeline-view').style.display = 'none';
+  document.getElementById('person-view').style.display = 'block';
+  document.getElementById('toolbar').style.display = 'none';
+  
+
+  const color = getCountryColor(p.country);
+  const relatedEvents = EVENTS.filter(e => e.person === name || (e.text && e.text.includes(name)));
+
+  const eventsHTML = relatedEvents.length > 0
+    ? `<div class="person-section-title">関連出来事</div>
+       <ul class="person-events-list">
+         ${relatedEvents.map(e => `
+           <li class="person-event-item">
+             <span class="pev-date">${e.year}${e.date ? '　' + e.date : ''}</span>
+             <span class="pev-cat"><span class="cat-badge" style="border-color:${catColor[e.cat] || 'var(--border2)'};">${e.cat}</span></span>
+             <span class="pev-text ${e.type === 'birth' ? 'ev-birth' : e.type === 'death' ? 'ev-death' : 'ev-normal'}">${e.text}</span>
+             <span class="pev-date" style="width:100px">${e.place || ''}</span>
+           </li>`).join('')}
+       </ul>`
+    : '';
+
+  const linksHTML = p.links && p.links.length > 0
+    ? `<div class="person-section-title">関連人物</div>
+       <div style="display:flex;flex-wrap:wrap;gap:8px">
+         ${p.links.map(l => `<span class="person-link" onclick="showPerson('${l.replace(/'/g,"\\'")}')"><em>${l}</em></span>`).join('')}
+       </div>`
+    : '';
+
+  document.getElementById('person-content').innerHTML = `
+    <div class="person-header">
+      <div class="person-name">${name}</div>
+      ${p.nameAlt ? `<div class="person-name-sub">${p.nameAlt}</div>` : ''}
+      <div class="person-meta">
+        ${p.born ? `<span class="meta-chip" style="color:var(--ev-birth)">生 ${p.born}</span>` : ''}
+        ${p.died ? `<span class="meta-chip" style="color:var(--ev-death)">没 ${p.died}</span>` : ''}
+        ${p.country ? `<span class="meta-chip"><span class="country-dot" style="background:${color}"></span>${p.country}</span>` : ''}
+        ${p.cat ? `<span class="meta-chip">${p.cat}</span>` : ''}
+      </div>
+    </div>
+    ${p.bio ? `<div class="person-bio">${p.bio}</div>` : ''}
+    ${eventsHTML}
+    ${linksHTML}
+    ${p.notes ? `<div class="person-section-title">メモ</div><div class="person-bio">${p.notes}</div>` : ''}
+  `;
+}
+
+function backToTable() {
+  document.getElementById('person-view').style.display = 'none';
+  document.getElementById('toolbar').style.display = 'flex';
+  switchView(previousView);
+  setTimeout(() => { window.scrollTo(0, savedScrollY); }, 0);
+}
+
+// ══ SWITCH VIEW ══
+function switchView(v) {
+  currentView = v;
+  document.getElementById('table-view').style.display    = v === 'table'    ? 'block' : 'none';
+  document.getElementById('timeline-view').style.display = v === 'timeline' ? 'block' : 'none';
+  document.getElementById('persons-view').style.display  = v === 'persons'  ? 'block' : 'none';
+  document.getElementById('person-view').style.display   = 'none';
+  document.getElementById('toolbar').style.display       = 'flex';
+  document.getElementById('tab-table').classList.toggle('active',    v === 'table');
+  document.getElementById('tab-timeline').classList.toggle('active', v === 'timeline');
+  document.getElementById('tab-persons').classList.toggle('active',  v === 'persons');
+
+  // sidebar
+  document.querySelectorAll('#sidebar .sb-btn').forEach(b => {
+    if (b.textContent.trim() === '⊞ 年表') b.classList.toggle('active', v === 'table');
+    if (b.textContent.trim() === '∥　タイムライン') b.classList.toggle('active', v === '');
+    if (b.textContent.trim() === '◉ 人物一覧') b.classList.toggle('active', v === 'persons');
+  });
+
+  if (v === 'persons') renderPersonsGrid();
+  render();
+}
+
+function render() {
+  const filtered = getFiltered();
+  if (currentView === 'table')    renderTable(filtered);
+  if (currentView === 'timeline') renderTimeline(filtered);
+}
+
+render();
+</script>
+</body>
+</html>
