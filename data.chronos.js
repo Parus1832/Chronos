@@ -231,6 +231,7 @@ const EVENTS = [
   { year:1839, date:"11月15日", cat:"科学技術", text:"死去（1754年生まれ）　ボールトン・ワット商会の技師", person:"ウィリアム・マードック", nameAlt: "William Murdock", country:"イギリス", place:"バーミンガム", type:"death" },
 
   // ―― 1840 ――
+  { year:1840, date:"10月14日", cat:"科学技術", text:"生誕　物理学者", person:"フリードリヒ・コールラウシュ", nameAlt: "Friedrich Wilhelm Georg Kohlrausch", country:"ドイツ", place:"リンテルン", type:"birth" },
   { year:1840, date:"12月", cat:"科学技術", text:"クリスマス講演", person:"ジョン＝フレデリック・ダニエル", nameAlt: "John Frederic Daniell", country:"イギリス", place:"ロンドン", type:"event" },
 
   // ―― 1842 ――
@@ -401,6 +402,7 @@ const EVENTS = [
   { year:1852, date:null, cat:"文学", text:"マルクス『ルイ・ボナパルトのブリュメール18日』", person:null, country:"ドイツ", type:"event" },
 
   // ── 1853 ──
+  { year:1853, date:"7月18日", cat:"科学技術", text:"生誕（1928年没）", person:"ヘンドリック・ローレンツ", nameAlt: "Hendrik Antoon Lorentz", country:"オランダ", place:"アルンヘム", type:"birth" },
   { year:1853, date:null, cat:"国内政治",  text:"フランツ・ヨーゼフ帝暗殺未遂（ハンガリー人の仕立屋による）", person:null, country:"オーストリア", type:"event" },
   { year:1853, date:"12月18日",cat:"音楽", text:"サン＝サーンス『交響曲第一番』パリ初演", person:"カミーユ・サン＝サーンス", country:"フランス", type:"event" },
 
@@ -454,6 +456,7 @@ const EVENTS = [
   { year:1861, date:null, cat:"国際政治", text:"アメリカ南北戦争勃発（〜1865年）",  person:null, country:"アメリカ", type:"event" },
   { year:1861, date:"2月20日", cat:"文学", text:"ウジェーヌ・スクリーブ　死去　パリ", person:null, country:"フランス", type:"death" },
   { year:1861, date:"4月19日", cat:"科学技術", text:"死去　軍事技術者、火薬の権威", person:"チャールズ＝ウィリアム・パスレー", nameAlt: "Charles William Pasley", country:"イギリス", place:"ロンドン", type:"death" },
+  { year:1861, date:"7月8日", cat:"科学技術", text:"生誕（1933年没）", person:"ジョン・アーサー・トムソン", nameAlt:"John Arthur Thomson", country:"イギリス", place:"スコットランド", type:"birth" },
   { year:1861, date:null, cat:"科学技術", text:"『ロウソクの科学』（Griffin, Bohn and Co.より）", person:"マイケル・ファラデー",  nameAlt: "Michael Faraday", country:"イギリス", place:"", type:"event" },
   { year:1861, date:null, cat:"科学技術", text:"新元素タリウムを発見", person:"ウィリアム・クルックス", nameAlt: "William Crookes", country:"イギリス", place:null, type:"event" },
 
@@ -483,6 +486,7 @@ const EVENTS = [
   { year:1865, date:"4月1日",   cat:"社会", text:"ローマ＝オルテ間　鉄道開通", person:null, country:"イタリア", place:null,  type:"event" },
   { year:1865, date:"4月15日", cat:"国際政治", text:"エイブラハム・リンカーン暗殺", person:null, country:"アメリカ", type:"death" },
   { year:1865, date:"4月24日", cat:"要人",  text:"死去（結核性髄膜炎）", person:"ニコライ・アレクサンドロヴィチ",  country:"フランス", place: "ニース", type:"death" },
+  { year:1865, date:"5月25日", cat:"科学技術", text:"生誕（1943年没）　物理学者", person:"ピーター・ゼーマン", nameAlt: "Pieter Zeeman", country:"オランダ", place:"ゾンネメレ", type:"birth" },
   { year:1865, date:"6月9日",  cat:"音楽", text:"生誕　ノーレ・リュンデルセ", person:"カール・ニールセン", country:"デンマーク", type:"birth" },
   { year:1865, date:"6月10日", cat:"音楽", text:"ワーグナー『トリスタンとイゾルデ』バイエルン宮廷歌劇場初演",  person:null, country:"ドイツ", type:"event" },
   { year:1865, date:null, cat:"国際政治", text:"コーカンド汗国首都タシケント陥落（ロシア）", person:null, country:"ロシア", type:"event" },
@@ -570,6 +574,9 @@ const EVENTS = [
   { year:1903, date:"9月11日", cat:"思想", text:"生誕（1969年没）", person:"テオドール・アドルノ", nameAlt: "Theodor Ludwig Adorno-Wiesengrund", country:"ドイツ", place:"フランクフルト", type:"birth" },
   { year:1903, date:null, cat:"社会", text:"フォード・モーター社、設立", person:"ヘンリー・フォード", nameAlt: "[Ford Motor Company], [Henry Ford]", country:"アメリカ", place:"ミシガン", type:"event" },
 
+  // ―― 1905 ――
+  { year:1905, date:"10月15日", cat:"科学技術", text:"生誕（1980年没）　物理学者", person:"チャールズ・パーシー・スノー", nameAlt: "Charles Percy Snow", country:"イギリス", place:"レスター", type:"birth" },
+
   // ―― 1906 ――
   { year:1906, date:"1月12日", cat:"思想", text:"生誕（1995年没）", person:"エマニュエル・レヴィナス", nameAlt: "Emmanuel Lévinas", country:"リトアニア", place:"カウナス", type:"birth" },
   { year:1906, date:"10月14日", cat:"思想", text:"生誕（1975年没）", person:"ハンナ・アーレント", nameAlt: "Hannah Arendt", country:"ドイツ", place:"ハノーファー", type:"birth" },
@@ -584,6 +591,7 @@ const EVENTS = [
   { year:1908, date:"", cat:"社会", text:"自動車「フォードT型」、発売", person:"フォード・モーター社", nameAlt: "[Ford Motor Company]", country:"アメリカ", place:"ミシガン", type:"event" },
 
   // ―― 1910 ――
+  { year:1910, date:"1月7日", cat:"科学技術", text:"死去　物理学者", person:"フリードリヒ・コールラウシュ", nameAlt: "Friedrich Wilhelm Georg Kohlrausch", country:"ドイツ", place:"マールブルク", type:"death" },
   { year:1910, date:"2月9日", cat:"科学技術", text:"生誕（1976年没）　分子生物学者", person:"ジャック・モノー", nameAlt: "Jacques Monod", country:"フランス", place:"パリ", type:"birth" },
   { year:1910, date:"8月26日", cat:"宗教", text:"生誕（1997年没）", person:"マザー・テレサ", nameAlt: "Mother Teresa", country:"北マケドニア", place:"スコピエ", type:"birth" },
 
