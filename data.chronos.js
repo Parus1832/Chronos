@@ -57,8 +57,16 @@ const EVENTS = [
   { year:1777, date:"6月27日", cat:"美術", text:"生誕　建築家", person:"フランソワ・ドゥブレ", nameAlt:"François Debret", country:"フランス", place:"パリ", type:"birth" },
 
   // ―― 1778 ――
+  { year:1778, date:"1月10日", cat:"科学技術", text:"死去", person:"カール・フォン・リンネ", nameAlt:"Carl von Linné", country:"スウェーデン", place:"ウプサラ", type:"death" },
+  { year:1778, date:"5月4日", cat:"要人", text:"生誕　外交官、総督", person:"ミハイル・マグニツキー", nameAlt:"Михаил Леонтьевич Магницкий", country:"ロシア", place:"モスクワ", type:"birth" },
+  { year:1778, date:"6月28日", cat:"思想", text:"死去（1712年生まれ）", person:"ジャン＝ジャック・ルソー", nameAlt: "Jean-Jacques Rousseau", country:"スイス", place:"ジュネーヴ", type:"death" },
+  { year:1778, date:"11月14日", cat:"音楽", text:"生誕", person:"ヨハン・ネポムク・フンメル", nameAlt:"Johann Nepomuk Hummel", country:"スロヴァキア", place:null, type:"birth" },
   { year:1778, date:"12月6日", cat:"科学技術", text:"生誕　化学者", person:"ジョセフ・ルイ・ゲー＝リュサック", nameAlt: "Joseph Louis Gay-Lussac", country:"フランス", place:"サン＝レオナール＝ド＝ノブラ", type:"birth" },
   { year:1778, date:"12月17日", cat:"科学技術", text:"生誕　化学者", person:"ハンフリー・デイヴィー", nameAlt: "Humphry Davy", country:"イギリス", place:"ペンザンス", type:"birth" },
+  { year:1778, date:"12月21日", cat:"要人", text:"生誕　法学者、政治家", person:"アナルス・サンドエ・エアステッズ", nameAlt:"Anders Sandøe Ørsted", country:"デンマーク", place:"ルドコービング", type:"birth" },
+  { year:1778, date:null, cat:"美術", text:"『ヘクトールの遺体』", person:"ジャック=ルイ・ダヴィッド", nameAlt:["Étude de nu de Hector", "Jacques-Louis David"], country:"フランス", place:"", type:"event" },
+    { year:1778, date:null, cat:"法", text:"寛容令　カトリック以外にも戸籍上の身分を認める", person:null, nameAlt:null, country:"フランス", place:"カトリック以外にも戸籍上の身分を認める", type:"event" },
+  { year:1778, date:null, cat:"音楽", text:"トランペット・ティンパニ奏者連合、廃止", person:null, nameAlt:null, country:"オーストリア", place:null, type:"event" },
 
   // ―― 1780 ――
   { year:1780, date:"9月8日", cat:"科学技術", text:"生誕　軍事技術者、火薬の権威", person:"チャールズ＝ウィリアム・パスレー", nameAlt: "Charles William Pasley", country:"イギリス", place:"ダンフリーズシャー", type:"birth" },
@@ -68,7 +76,7 @@ const EVENTS = [
 
   // ―― 1782 ――
   { year:1782, date:"7月12日", cat:"思想", text:"生誕　東洋学者", person:"エティエンヌ・カトルメール", nameAlt: "Étienne Marc Quatremère", country:"フランス", place:"パリ", type:"birth" },
-  { year:1782, date:"8月29日", cat:"社会", text:"ロイヤル・ジョージ（Royal George）号、スピットヘッドで沈没", person:null, nameAlt: null, country:"イギリス", place:"スピットヘッド", type:"death" },
+  { year:1782, date:"8月29日", cat:"社会", text:"ロイヤル・ジョージ（Royal George）号、スピットヘッドで沈没", person:null, nameAlt: null, country:"イギリス", place:"スピットヘッド", type:"event" },
   { year:1782, date:"12月14日", cat:"科学技術", text:"熱気球を2km飛ばせる", person: [ "ジョゼフ・ミシェル・モンゴルフィエ", "ジャック・エティエンヌ・モンゴルフィエ" ] , nameAlt: [ "Joseph Michel Montgolfier", "Jaques étienne Montgolfier" ] , country:"フランス", place:"", type:"event" },
 
   // ―― 1783 ――
@@ -529,6 +537,7 @@ const EVENTS = [
 
   // ―― 1887 ――
   { year:1887, date:"10月17日", cat:"科学技術", text:"死去", person:"グスタフ・ロベルト・キルヒホッフ", nameAlt: "Gustav Robert Kirchhoff", country:"ドイツ", place:"ベルリン", type:"death" },
+  { year:1887, date:"12月27日", cat:"科学技術", text:"生誕（1971年没）　物理学者", person:"エドワード・アンドレード", nameAlt: "Edward Neville da Costa Andrade", country:"イギリス", place:"ロンドン", type:"birth" },
 
   // ―― 1888 ――
   { year:1888, date:"5月26日", cat:"科学技術", text:"死去　化学者", person:"アスカニオ・ソブレロ", nameAlt: "Ascanio Sobrero", country:"イタリア", place:"トリノ", type:"death" }, 
