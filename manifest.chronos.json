@@ -1,7 +1,7 @@
 {
   "name": "Chronos — 19世紀年表",
-  "short_name": "Chronos",
-  "start_url": "/Chronos/index.html",
+  "short_name": "Chronos", 
+  "start_url": "/Chronos/index.chronos.html",
   "display": "standalone",
   "background_color": "#1a1710",
   "theme_color": "#1a1710",
