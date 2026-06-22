@@ -31,6 +31,9 @@
 
 const EVENTS = [
 
+  // ―― 1773 ――
+  { year:1773, date:"6月13日", cat:"科学技術", text:"生誕　物理学者", person:"トマス・ヤング", nameAlt: "Thomas Young", country:"イギリス", place:"ミルバートン", type:"birth" },
+
   // ―― 1774 ――
   { year:1774, date:"5月10日", cat:"国内政治", text:"即位", person:"ルイ16世", nameAlt:"Louis XVI", country:"フランス", place:null, type:"event" },
   { year:1774, date:"7月21日", cat:"国際政治", text:"キュチュク-カルナイジ条約　第1次露土戦争講和", person:null, nameAlt:"Кючук-Кайнарджийский мир", country:"ロシア/トルコ", place:"", type:"event" },
@@ -75,6 +78,7 @@ const EVENTS = [
   { year:1781, date:"3月18日", cat:"要人", text:"死去（痛風）（1727年生まれ）　政治家", person:"ジャック・テュルゴー", nameAlt: "Anne-Robert-Jacques Turgot, Baron de l'Aulne", country:"フランス", place:"パリ", type:"death" },
 
   // ―― 1782 ――
+  { year:1782, date:"7月5日", cat:"思想", text:"生誕", person:"会沢正志斎", nameAlt: "あいざわ せいしさい", country:"日本", place:"水戸（茨城）", type:"birth" },
   { year:1782, date:"7月12日", cat:"思想", text:"生誕　東洋学者", person:"エティエンヌ・カトルメール", nameAlt: "Étienne Marc Quatremère", country:"フランス", place:"パリ", type:"birth" },
   { year:1782, date:"8月29日", cat:"社会", text:"ロイヤル・ジョージ（Royal George）号、スピットヘッドで沈没", person:null, nameAlt: null, country:"イギリス", place:"スピットヘッド", type:"event" },
   { year:1782, date:"12月14日", cat:"科学技術", text:"熱気球を2km飛ばせる", person: [ "ジョゼフ・ミシェル・モンゴルフィエ", "ジャック・エティエンヌ・モンゴルフィエ" ] , nameAlt: [ "Joseph Michel Montgolfier", "Jaques étienne Montgolfier" ] , country:"フランス", place:"", type:"event" },
@@ -98,11 +102,21 @@ const EVENTS = [
   { year:1787, date:"10月4日", cat:"要人", text:"生誕　政治家・歴史家", person:"フランソワ＝ピエール＝ギヨーム・ギゾー", nameAlt: "François-Pierre-Guillaume Guizot", country:"フランス", place:"ニーム", type:"birth" },
   { year:1787, date:"11月18日", cat:"美術", text:"生誕", person:"ルイ・ジャック・マンデ・ダゲール", nameAlt: "Louis Jacques Mandé Daguerre", country:"フランス", place:"コルメイユ＝ザン＝パリジ", type:"birth" },
 
+　// ―― 1789 ――
+  { year:1789, date:"4月9日", cat:"思想", text:"死去", person:"三浦梅園", nameAlt:"みうら ばいえん", country:"日本", place:"大分", type:"death" },
+
   // ―― 1790 ――
   { year:1790, date:"3月12日", cat:"科学技術", text:"生誕", person:"ジョン＝フレデリック・ダニエル", nameAlt: "John Frederic Daniell", country:"イギリス", place:"ロンドン", type:"birth" },
 
   // ―― 1791 ――
   { year:1791, date:"9月22日", cat:"科学技術", text:"生誕", person:"マイケル・ファラデー", nameAlt: "Michael Faraday", country:"イギリス", place:"サリー", type:"birth" },
+
+  // ―― 1792 ――
+  { year:1792, date:"3月7日", cat:"科学技術", text:"生誕　天文学者", person:"ジョン・ハーシェル", nameAlt: "John Frederick William Herschel", country:"イギリス", place:"スラウ", type:"birth" },
+
+  // ―― 1793 ――
+  { year:1793, date:"3月4日", cat:"思想", text:"生誕", person:"大塩平八郎", nameAlt: "おおしお へいはちろう", country:"日本", place:"大阪", type:"birth" },
+  { year:1793, date:"10月20日", cat:"美術", text:"生誕", person:"渡辺崋山", nameAlt: "わたなべ かざん", country:"日本", place:"江戸", type:"birth" },
 
   // ── 1794 ──
   { year:1794, date:"3月29日", cat:"科学技術", text:"死去（1743年生まれ）　数学者", person:"ニコラ・ド・コンドルセ", nameAlt: "Marie Jean Antoine Nicolas de Caritat, marquis de Condorcet", country:"フランス", place:"ブール＝ラ＝レーヌ", type:"death" },
@@ -117,6 +131,9 @@ const EVENTS = [
   { year:1796, date:"7月6日", cat:"思想", text:"生誕　哲学者", person:"テオドール・ジュフロワ", nameAlt: "Théodore Simon Jouffroy", country:"フランス", place:"レ・ポンテ", type:"birth" },
   { year:1796, date:"8月4日", cat:"思想", text:"生誕　哲学者", person:"ピエール＝シモン・バランシュ", nameAlt: "Pierre-Simon Ballanche", country:"フランス", place:"リヨン", type:"birth" },
 
+  // ―― 1798 ――
+  { year:1798, date:null, cat:"科学技術", text:"気体研究所、設立", person:null, nameAlt: "The Pneumatic Institution", country:"イギリス", place:"ブリストル", type:"event" },
+
   // ── 1799 ──
   { year:1799, date:null, cat:"科学技術", text:"王立研究所、設立", person:null, nameALt: "The Royal Institution of Great Britain", country:"イギリス", place:"ロンドン", type:"event" },
   { year:1779, date:"", cat:"科学技術", text:"生誕", person:"イェンス・ヤコブ・ベルセリウス", nameAlt: "Jöns Jakob Berzelius", country:"スウェーデン", place:"リンシェーピング", type:"birth" },
@@ -128,11 +145,16 @@ const EVENTS = [
   { year:1800, date:null, cat:"科学技術", text:"ヴォルタ電池が発明される", person:"アレッサンドロ・ヴォルタ", nameAlt: "Alessandro Volta", country:"イタリア", place:null, type:"event" },
   { year:1800, date:"2月11日", cat:"科学技術", text:"生誕", person:"ウィリアム・ヘンリー・フォックス・タルボット", nameAlt: "William Henry Fox Talbot", country:"イギリス", place:"ドーセット", type:"birth" },
 
+  // ―― 1802 ――
+  { year:1802, date:"6月28日", cat:"科学技術", text:"死去（腸チフス）（1766年生まれ）", person:"トマス・ガーネット", nameAlt: "Thomas Garnet", country:"イギリス", place:"ロンドン", type:"death" },
+
   // ―― 1803 ――
   { year:1803, date:"2月17日", cat:"思想", text:"生誕", person:"エドガー・キネ", nameAlt: "Edgar Quinet", country:"フランス", place:"ブールカン＝ブレス", type:"birth" },
   { year:1803, date:"10月", cat:"科学技術", text:"死去（1750年生まれ）　技師", person:"アミ・アルガン", nameAlt: "Pierre Ami Argand", country:"スイス", place:"ジュネーヴ", type:"death" },
+  { year:1803, date:null, cat:"科学技術", text:"ロジウム、パラジウム発見", person:"ウィリアム・ウォラストン", nameAlt: "William Hyde Wollaston", country:"イギリス", place:null, type:"event" },
 
   // ―― 1804 ――
+  { year:1804, date:"6月12日", cat:"思想", text:"生誕", person:"高野長英", nameAlt: "たかの ちょうえい", country:"日本", place:"水沢（岩手）", type:"birth" },
   { year:1804, date:"9月16日", cat:"科学技術", text:"自ら水素気球で7000m超へ", person:"ジョセフ・ルイ・ゲー＝リュサック", nameAlt: "Joseph Louis Gay-Lussac", country:"フランス", place:"パリ", type:"event" },
   { year:1804, date:"", cat:"思想", text:"死去（1733年生まれ）", person:"ジョゼフ・プリーストリー", nameAlt: "Joseph Pristley", country:"アメリカ", place:"ペンシルバニア", type:"death" },
 
@@ -142,11 +164,16 @@ const EVENTS = [
 
  // ―― 1808 ――
  { year:1808, date:null, cat:"思想", text:"『インド人の言語と英知について』", person:"フリードリヒ・シュレーゲル", nameAlt: "Karl Wilhelm Friedrich von Schlegel", country:"ドイツ", place:null, type:"event" },
+ { year:1808, date:null, cat:"科学技術", text:"ナポレオン賞（副賞3000フラン）を貰う", person:"ハンフリー・デイヴィー", nameAlt: "Humphry Davy", country:"フランス", place:null, type:"event" },
+
+  // ―― 1809 ――
+  { year:1809, date:"9月22日", cat:"思想", text:"生誕", person:"横井小楠", nameAlt: "よこい しょうなん", country:"日本", place:"熊本", type:"birth" },
 
   // ―― 1810 ――
   { year:1810, date:"6月26日", cat:"科学技術", text:"死去（1740年生まれ）", person:"ジョゼフ・ミシェル・モンゴルフィエ", nameAlt: "Joseph Michel Montgolfier", country:"フランス", place:"バラリュック＝レ＝バン", type:"death" },
 
   // ── 1811 ──
+  { year:1811, date:"3月22日", cat:"思想", text:"生誕", person:"佐久間象山", nameAlt: "さくま しょうざん", country:"日本", place:"信州（長野）", type:"birth" },
   { year:1811, date:"3月30日", cat:"科学技術", text:"生誕", person:"ロベルト・ヴィルヘルム・ブンゼン", nameAlt: "Robert Wilhelm Bunsen", country:"ドイツ", place:"ゲッティンゲン", type:"birth" },
 
   // ―― 1812 ――
@@ -161,11 +188,17 @@ const EVENTS = [
 
   // ――1814 ――
   { year:1814, date:"4月5日", cat:"科学技術", text:"生誕", person:"フランソワ＝エマニュエル・ヴェルガン", nameAlt: "François-Emmanuel Verguin", country:"フランス", place:"リヨン", type:"birth" },
+  { year:1814, date:"5月3日", cat:"政治（国内）", text:"エルバ島到着", person:"ナポレオン・ボナパルト", nameAlt: "Napoléon Bonaparte", country:"フランス", place:"エルバ島", type:"event" },
+
+  // ―― 1815 ――
+  { year:1815, date:"2月26日", cat:"政治（国内）", text:"エルバ島脱出", person:"ナポレオン・ボナパルト", nameAlt: "Napoléon Bonaparte", country:"フランス", place:"エルバ島", type:"event" },
+  { year:1815, date:"5月21日", cat:"科学技術", text:"死去（1753年生まれ）　科学者", person:"ニコルソン", nameAlt: "William Nicholson", country:"イギリス", place:"ブルームズベリー", type:"death" },
 
   // ―― 1817 ――
   { year:1817, date:"6月30日", cat:"科学技術", text:"生誕　植物学者　", person:"ジョセフ・ダルトン・フッカー", nameAlt: "Joseph Dalton Hooker", country:"イギリス", place:"ヘイルスワース", type:"birth" },
 
   // ―― 1820 ――
+  { year:1820, date:"8月2日", cat:"科学技術", text:"生誕", person:"ジョン・ティンダル", nameAlt: "John Tyndall", country:"イギリス", place:"アイルランド", type:"birth" },
   { year:1820, date:null, cat:"科学技術", text:"ゴムの加工法、開発", person:"トーマス・ハンコック", nameAlt: "Thomas Hancock", country:"イギリス", place:"ロンドン", type:"event" },
 
   // ―― 1821 ――
@@ -197,13 +230,20 @@ const EVENTS = [
 
   // ―― 1828 ――
   { year:1828, date:"10月31日", cat:"科学技術", text:"生誕　発明家", person:"ジョゼフ・ウィルソン・スワン", nameAlt: "Joseph Wilson Swan", country:"イギリス", place:"サンダーランド", type:"birth" },
+  { year:1828, date:"12月22日", cat:"科学技術", text:"死去（1766年生まれ）", person:"ウィリアム・ウォラストン", nameAlt: "William Hyde Wollaston", country:"イギリス", place:"ロンドン", type:"death" },
 
   // ―― 1829 ――
   { year:1829, date:"1月12日", cat:"思想", text:"死去（1772年生まれ）", person:"フリードリヒ・シュレーゲル", nameAlt: "Karl Wilhelm Friedrich von Schlegel", country:"ドイツ", place:"ドレスデン", type:"death" },
+  { year:1829, date:"5月10日", cat:"科学技術", text:"死去　物理学者", person:"トマス・ヤング", nameAlt: "Thomas Young", country:"イギリス", place:"ロンドン", type:"death" },
   { year:1829, date:"5月29日", cat:"科学技術", text:"死去（心臓病）　化学者", person:"ハンフリー・デイヴィー", nameAlt: "Humphry Davy", country:"スイス", place:"ジュネーヴ", type:"death" },
+  { year:1829, date:"9月7日", cat:"科学技術", text:"生誕", person:"アウグスト・ケクレ", nameAlt: "Friedrich August Kekulé von Stradonitz", country:"ドイツ", place:"ダルムシュタット", type:"birth" },
 
   // ―― 1830 ――
+  { year:1830, date:"9月20日", cat:"思想", text:"生誕", person:"吉田松陰", nameAlt: "よしだ しょういん", country:"日本", place:"長州（山口）", type:"birth" },
   { year:1830, date:"9月15日", cat:"社会", text:"リバプール・マンチェスター鉄道、開業", person:null, nameAlt: "Liverpool and Manchester Railway", country:"イギリス", place:"リバプール～マンチェスター", type:"event" },
+
+  // ―― 1831 ――
+  { year:1831, date:"6月13日", cat:"科学技術", text:"生誕", person:"ジェームズ・クラーク・マクスウェル", nameAlt: "James Clerk Maxwell", country:"イギリス", place:"スコットランド", type:"birth" },
 
   // ── 1832 ──
   { year:1832, date:"6月17日", cat:"科学技術", text:"生誕", person:"ウィリアム・クルックス", nameAlt: "William Crookes", country:"イギリス", place:"ロンドン", type:"birth" },
@@ -218,9 +258,14 @@ const EVENTS = [
 
   // ―― 1834 ――
   { year:1834, date:"2月19日", cat:"美術", text:"生誕", person:"ウィリアム・モリス", nameAlt: "William Morris", country:"イギリス", place:"ロンドン", type:"birth" },
+  { year:1834, date:"4月11日", cat:"要人", text:"死去（1757年生まれ）　政治家", person:"ジョン・フラー", nameAlt: "John Fuller", country:"イギリス", place:"ロンドン", type:"death" },
 
   // ―― 1836 ――
   { year:1836, date:null, cat:"科学技術", text:"ダニエル電池、発明される", person:"ジョン＝フレデリック・ダニエル", nameAlt: "John Frederic Daniell", country:"イギリス", place:null, type:"event" },
+
+  // ―― 1837 ――
+  { year:1837, date:"5月1日", cat:"思想", text:"死去（自決）", person:"大塩平八郎", nameAlt: "おおしお へいはちろう", country:"日本", place:"大阪", type:"death" },
+  { year:1837, date:"7月30日", cat:"国際政治", text:"モリソン号砲撃事件", person:null, nameAlt: "Morrison Incident", country:"日本", place:"鹿児島湾", type:"event" },
 
   // ―― 1838 ――
   { year:1838, date:"2月21日", cat:"思想", text:"死去（1758年生まれ）", person:"シルヴェストル・ド・サシ", nameAlt: "Antoine-Isaac Silvestre de Sacy", country:"フランス", place:"パリ", type:"death" },
@@ -234,9 +279,14 @@ const EVENTS = [
   { year:1840, date:"10月14日", cat:"科学技術", text:"生誕　物理学者", person:"フリードリヒ・コールラウシュ", nameAlt: "Friedrich Wilhelm Georg Kohlrausch", country:"ドイツ", place:"リンテルン", type:"birth" },
   { year:1840, date:"12月", cat:"科学技術", text:"クリスマス講演", person:"ジョン＝フレデリック・ダニエル", nameAlt: "John Frederic Daniell", country:"イギリス", place:"ロンドン", type:"event" },
 
+  // ―― 1841 ――
+  { year:1841, date:"11月23日", cat:"美術", text:"死去", person:"渡辺崋山", nameAlt: "わたなべ かざん", country:"日本", place:"愛知", type:"death" },
+
   // ―― 1842 ――
   { year:1842, date:"1月15日", cat:"思想", text:"生誕", person:"ポール・ラファルグ", nameAlt: "Paul Lafargue", country:"キューバ", place:"サンティアゴ・デ・キューバ", type:"birth" },
   { year:1842, date:"2月4日", cat:"思想", text:"死去　哲学者", person:"テオドール・ジュフロワ", nameAlt: "Théodore Simon Jouffroy", country:"フランス", place:"パリ", type:"death" },
+  { year:1842, date:"9月20日", cat:"科学技術", text:"生誕（1923年没）", person:"ジェームズ・デュワー", nameAlt: "James Dewar", country:"イギリス", place:"スコットランド", type:"event" },
+  { year:1842, date:"11月2日", cat:"科学技術", text:"死去（1768年生まれ）　外科医", person:"アンソニー・カーライル", nameAlt: "Anthony Carlisle", country:"イギリス", place:"ロンドン", type:"death" },
 
   // ── 1843 ──
   { year:1843, date:null, cat:"国際政治", text:"清、イギリスに香港を割譲", person:null, country:"清/イギリス", type:"event" },
@@ -354,6 +404,7 @@ const EVENTS = [
   { year:1845, date:null, cat:"文学", text:"『王妃マルゴ』", person:"アレクサンドル・デュマ", country:"フランス", type:"event" },
   { year:1845, date:null, cat:"思想", text:"エドガー・キネ『キリスト教とフランス革命』", person:null, country:"フランス", type:"event" },
   { year:1845, date:null, cat:"美術", text:"アルフレッド・エドワード・シャロン『シルフィードを演じるマリー・タリオーニ』", person:null, country:"スイス", type:"event" },
+  { year:1845, date:null, cat:"科学技術", text:"「ファラデー効果」の発見　直線偏光が磁場によって曲げられる", person:"マイケル・ファラデー", nameAlt: "Michael Faraday", country:"イギリス", place:"", type:"event" },
   { year:1845, date:null, cat:"法", text:"ガラス税の廃止", person:null, country:"イギリス", type:"event" },
   { year:1845, date:null, cat:"メディア", text:"『チェンバーズ・ジャーナル（Chamber’s Journal）』、創刊", person:null, country:"イギリス", type:"birth" },
   { year:1845, date:null, cat:"社会", text:"カシノ・ホール、開場", person:null, country:"ブラジル", place:"リオ・デ・ジャネイロ", type:"event" },
@@ -390,6 +441,7 @@ const EVENTS = [
   { year:1850, date:"5月9日", cat:"科学技術", text:"死去　化学者", person:"ジョセフ・ルイ・ゲー＝リュサック", nameAlt: "Joseph Louis Gay-Lussac", country:"フランス", place:"パリ", type:"death" },
   { year:1850, date:"8月26日", cat:"要人", text:"ルイ・フィリップ王　死去　イギリス", person:null, country:"フランス/イギリス", type:"death" },
   { year:1850, date:null, cat:"科学技術", text:"英国アイルランド磁気電信会社、創立", person:null, nameAlt: "British and Irish Magnetic Telegraph Company", country:"イギリス", place:null, type:"event" },
+  { year:1850, date:"12月3日", cat:"思想", text:"死去", person:"高野長英", nameAlt: "たかの ちょうえい", country:"日本", place:"江戸", type:"death" },
 
   // ── 1851 ──
   { year:1851, date:null, cat:"国内政治", text:"ルイ・ナポレオンのクーデタ", person:null, country:"フランス", type:"event" },
@@ -413,6 +465,7 @@ const EVENTS = [
 
   // ── 1855 ──
   { year:1855, date:null, cat:"国際政治", text:"万国博覧会（パリ）",person:null, country:"フランス", type:"event" },
+  { year:1855, date:"7月26日", cat:"思想", text:"生誕（1936年没）　社会学者", person:"フェルディナント・テンニース", nameAlt: "Ferdinand Tönnies", country:"ドイツ", place:"シュレースヴィヒ＝ホルシュタイン", type:"birth" },
   { year:1855, date:"9月16日", cat:"要人",  text:"ウヴァーロフ　死去　モスクワ",  person:null,  country:"ロシア",   type:"death" },
 
   // ── 1856 ──
@@ -441,6 +494,7 @@ const EVENTS = [
   { year:1859, date:"3月19日", cat:"音楽", text:"グノー『ファウスト』パリ・リリック座初演", person:null, country:"フランス", type:"event"},
   { year:1859, date:"4月8日", cat:"思想", text:"フッサール　生誕　モラヴィア", person:null, country:"オーストリア", type:"birth" },
   { year:1859, date:"10月18日", cat:"思想", text:"生誕（1941年没）", person:"アンリ・ベルクソン", nameAlt: "Henri Bergson", country:"フランス", place:"パリ", type:"birth" },
+  { year:1859, date:"11月21日", cat:"思想", text:"死去（死刑）", person:"吉田松陰", nameAlt: "よしだ しょういん", country:"日本", place:"江戸", type:"death" },
   { year:1859, date:null, cat:"科学技術", text:"分光器を発明", person:"ロベルト・ヴィルヘルム・ブンゼン、グスタフ・キルヒホッフ", nameAlt: "Robert Wilhelm Bunsen, Gustav Robert Kirchhoff", country:"ドイツ", place:null, type:"event" },
   { year:1856, date:null, cat:"科学技術", text:"マゼンタの合成染料、発明", person:"フランソワ＝エマニュエル・ヴェルガン", nameAlt: "François-Emmanuel Verguin", country:"フランス", place:null, type:"event" },
   { year:1859, date:null, cat:"メディア", text:"『科学ニュース』、創刊（1932年まで）", person:"ウィリアム・クルックス", nameAlt: ["Chemical News", "William Crookes" ], country:"イギリス", place:"ロンドン", type:"event" },
@@ -469,12 +523,14 @@ const EVENTS = [
   { year:1863, date:"1月17日", cat:"舞台芸術", text:"生誕　モスクワ", person:"コンスタンティン・スタニスラフスキー", country:"ロシア", type:"birth" },
   { year:1863, date:"1月23日", cat:"国内政治", text:"ポーランド蜂起", person:null, country:"ロシア", type:"event" },
   { year:1863, date:"7月30日", cat:"社会", text:"生誕（1947年没）", person:"ヘンリー・フォード", nameAlt: "Henry Ford", country:"アメリカ", place:"ミシガン", type:"birth" },
+  { year:1863, date:"8月27日", cat:"思想", text:"死去", person:"会沢正志斎", nameAlt: "あいざわ せいしさい", country:"日本", place:"水戸（茨城）", type:"death" },
 
   // ── 1864 ──
   { year:1864, date:"3月10日", cat:"国内政治", text:"ルートヴィヒ2世　即位（バイエルン）", person:null, country:"ドイツ", type:"event" },
   { year:1864, date:"2月1日～", cat:"国際政治", text:"第2次シュレースヴィ戦争",  person:null, country:"デンマーク/普",type:"event"},
   { year:1864, date:"5月2日",  cat:"音楽", text:"マイアベーア　死去　パリ",   person:null, country:"ドイツ/フランス",  type:"death" },
   { year:1864, date:"5月15日", cat:"美術", text:"生誕", person:"ヴィルヘルム・ハマスホイ", country:"デンマーク", place: "コペンハーゲン", type:"birth" },
+  { year:1864, date:"8月12日", cat:"思想", text:"死去（暗殺）", person:"佐久間象山", nameAlt: "さくま しょうざん", country:"日本人", place:"京都", type:"death" },
   { year:1864, date:"8月31日", cat:"思想", text:"死去（決闘）", person:"フェルディナント・ラッサール", nameAlt: "Ferdinand Johann Gottlieb Lassalle", country:"スイス", place:"カルージュ", type:"death" },
   { year:1864, date:"11月3日", cat:"科学技術", text:"死去", person:"フランソワ＝エマニュエル・ヴェルガン", nameAlt: "François-Emmanuel Verguin", country:"フランス", place:"イェール", type:"death" },
 
@@ -510,10 +566,14 @@ const EVENTS = [
   { year:1868, date:"8月29日", cat:"科学技術", text:"死去　化学者", person:"クリスチャン・シェーンバイン", nameAlt: "Christian Schönbein", country:"ドイツ", place:"バーデン＝バーデン", type:"death" }, 
 
   // ―― 1869 ――
+  { year:1869, date:"2月15日", cat:"思想", text:"死去（暗殺）", person:"横井小楠", nameAlt: "よこい しょうなん", country:"日本", place:"京都", type:"death" },
   { year:1869, date:"10月2日", cat:"要人", text:"生誕（1948年没）", person:"マハトマ・ガンディー", nameAlt: "Mohandas Karamchand Gandi", country:"インド", place:"グジャラート", type:"birth" },
 
   // ―― 1870 ――
   { year:1870, date:"1月25日", cat:"要人", text:"死去　政治家", person:"ヴィクトル・ド・ブロイ公爵", nameAlt: "Achille Léonce Victor Charles de Broglie", country:"フランス", place:"パリ", type:"death" },
+
+  // ―― 1871 ――
+  { year:1871, date:"5月11日", cat:"科学技術", text:"死去　天文学者", person:"ジョン・ハーシェル", nameAlt: "John Frederick William Herschel", country:"イギリス", place:"ホークハースト", type:"death" },
 
   // ―― 1872 ――
   { year:1872, date:"5月18日", cat:"思想", text:"生誕（1970年没）　哲学者", person:"バートランド・ラッセル", nameAlt: "Bertrand Arthur William Russell", country:"イギリス", place:"ウェールズ", type:"birth" },
@@ -532,6 +592,7 @@ const EVENTS = [
 
   // ―― 1879 ――
   { year:1879, date:"2月19日", cat:"美術", text:"講演「民衆の芸術」", person:"ウィリアム・モリス", nameAlt: "William Morris", country:"イギリス", place:"バーミンガム美術デザイン学校", type:"event" },
+  { year:1879, date:"11月5日", cat:"科学技術", text:"死去", person:"ジェームズ・クラーク・マクスウェル", nameAlt: "James Clerk Maxwell", country:"イギリス", place:"ケンブリッジ", type:"death" },
 
   // ―― 1882 ――
   { year:1882, date:null, cat:"思想", text:"『悦ばしき知識』", person:"フリードリヒ・ニーチェ", nameAlt: "Friedrich Wilhelm Nietzsche", country:"ドイツ", place:null, type:"event" },
@@ -549,10 +610,14 @@ const EVENTS = [
   // ―― 1891 ――
   { year:1891, date:"1月22日", cat:"思想", text:"生誕（1937年没）", person:"アントニオ・グラムシ", nameAlt: "Antonio Gramsci", country:"イタリア", place:"アーレス", type:"birth" }, 
   
+  // ―― 1893 ――
+  { year:1893, date:"12月4日", cat:"科学技術", text:"死去", person:"ジョン・ティンダル", nameAlt: "John Tyndall", country:"イギリス", place:"サリー", type:"death" },
+
   // ―― 1895 ――
   { year:1895, date:"2月14日", cat:"思想", text:"生誕（1973年没）", person:"マックス・ホルクハイマー", nameAlt: "Max Horkheimer", country:"ドイツ", place:"シュトゥットガルト", type:"birth" },
 
   // ―― 1896 ――
+  { year:1896, date:"7月13日", cat:"科学技術", text:"死去", person:"アウグスト・ケクレ", nameAlt: "Friedrich August Kekulé von Stradonitz", country:"ドイツ", place:"ボン", type:"death" },
   { year:1896, date:"10月3日", cat:"美術", text:"死去（結核）", person:"ウィリアム・モリス", nameAlt: "William Morris", country:"イギリス", place:"ロンドン", type:"death" },
   { year:1896, date:"12月10日", cat:"科学技術", text:"死去（脳出血）", person:"アルフレッド・ノーベル", nameAlt: "Alfred Bernhard Nobel", country:"イタリア", place:"サンレモ", type:"death" },
 
@@ -568,6 +633,9 @@ const EVENTS = [
   { year:1900, date:"3月23日", cat:"思想", text:"生誕（1980年没）", person:"エーリッヒ・フロム", nameAlt:"Erich Seligmann Fromm", country:"ドイツ", place:"フランクフルト", type:"birth" },
   { year:1900, date:"8月25日", cat:"思想", text:"死去", person:"フリードリヒ・ニーチェ", nameAlt: "Friedrich Wilhelm Nietzsche", country:"ドイツ", place:"ヴァイマール", type:"death" },
   { year:1900, date:null, cat:"科学技術", text:"コダック社のブローニー型、発売（最初の小型カメラ）", person:null, nameAlt: "Brownie, Kodak", country:"アメリカ", place:null, type:"event" },
+
+  // ―― 1902 ――
+  { year:1902, date:"5月18日", cat:"思想", text:"生誕（1964年没）　社会学者", person:"フリッツ・パッペンハイム", nameAlt: "Fritz Pappenheim", country:"ドイツ", place:"ケルン", type:"birth" },
 
   // ―― 1903 ――
   { year:1903, date:"2月22日", cat:"音楽", text:"死去", person:"フーゴ・ヴォルフ", nameAlt: "Hugo Wolf", country:"オーストリア", place:"ウィーン", type:"death" },
