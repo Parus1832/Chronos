@@ -71,6 +71,12 @@ const EVENTS = [
     { year:1778, date:null, cat:"法", text:"寛容令　カトリック以外にも戸籍上の身分を認める", person:null, nameAlt:null, country:"フランス", place:"カトリック以外にも戸籍上の身分を認める", type:"event" },
   { year:1778, date:null, cat:"音楽", text:"トランペット・ティンパニ奏者連合、廃止", person:null, nameAlt:null, country:"オーストリア", place:null, type:"event" },
 
+  // ―― 1779 ――
+  { year:1779, date:"1月20日", cat:"舞台芸術", text:"オペラ『粉屋は魔法使いで詐欺師で仲人』", person:"ミハイル・ソコロフスキー", nameAlt:["Мельник — колдун, обманщик и сват", "Михаил Матвеевич Соколовский"], country:"ロシア", place:"モスクワ", type:"event" },
+  { year:1779, date:"8月20日", cat:"科学技術", text:"生誕", person:"イェンス・ヤコブ・ベルセリウス", nameAlt:"Jöns Jacob Berzelius", country:"スウェーデン", place:null, type:"birth" },
+  { year:1779, date:"11月14日", cat:"文学", text:"生誕", person:"アダム・エーレンスレイヤー", nameAlt:"Adam Gottlob Oehlenschläger", country:"デンマーク", place:"コペンハーゲン", type:"birth" },
+  { year:1779, date:null, cat:"文学", text:"叙事詩『ロシアーダ』", person:"ミハイル・ヘラースコフ", nameAlt:["Россиада", "Михаил Матвеевич Херасков"], country:"ロシア", place: null, type:"event" },
+
   // ―― 1780 ――
   { year:1780, date:"9月8日", cat:"科学技術", text:"生誕　軍事技術者、火薬の権威", person:"チャールズ＝ウィリアム・パスレー", nameAlt: "Charles William Pasley", country:"イギリス", place:"ダンフリーズシャー", type:"birth" },
 
@@ -154,6 +160,7 @@ const EVENTS = [
   { year:1803, date:null, cat:"科学技術", text:"ロジウム、パラジウム発見", person:"ウィリアム・ウォラストン", nameAlt: "William Hyde Wollaston", country:"イギリス", place:null, type:"event" },
 
   // ―― 1804 ――
+  { year:1804, date:"1月11日", cat:"科学技術", text:"死去（1745年生まれ）　科学者", person:"ジェームズ・タイトラー", nameAlt: "James Tytler", country:"アメリカ", place:"マサチューセッツ", type:"death" },
   { year:1804, date:"6月12日", cat:"思想", text:"生誕", person:"高野長英", nameAlt: "たかの ちょうえい", country:"日本", place:"水沢（岩手）", type:"birth" },
   { year:1804, date:"9月16日", cat:"科学技術", text:"自ら水素気球で7000m超へ", person:"ジョセフ・ルイ・ゲー＝リュサック", nameAlt: "Joseph Louis Gay-Lussac", country:"フランス", place:"パリ", type:"event" },
   { year:1804, date:"", cat:"思想", text:"死去（1733年生まれ）", person:"ジョゼフ・プリーストリー", nameAlt: "Joseph Pristley", country:"アメリカ", place:"ペンシルバニア", type:"death" },
@@ -164,6 +171,7 @@ const EVENTS = [
 
  // ―― 1808 ――
  { year:1808, date:null, cat:"思想", text:"『インド人の言語と英知について』", person:"フリードリヒ・シュレーゲル", nameAlt: "Karl Wilhelm Friedrich von Schlegel", country:"ドイツ", place:null, type:"event" },
+ { year:1808, date:null, cat:"科学技術", text:"市哲学者協会、設立　市民のための化学勉強会", person:"ジョン・テイタム", nameAlt: "John Tatum", country:"イギリス", place:"", type:"event" },
  { year:1808, date:null, cat:"科学技術", text:"ナポレオン賞（副賞3000フラン）を貰う", person:"ハンフリー・デイヴィー", nameAlt: "Humphry Davy", country:"フランス", place:null, type:"event" },
 
   // ―― 1809 ――
@@ -183,6 +191,9 @@ const EVENTS = [
   { year:1813, date:"4月23日", cat:"思想", text:"生誕　歴史家", person:"フレデリック・オザナム", nameAlt: "Frédéric Ozanam", country:"イタリア", place:"ミラノ", type:"birth" },
   { year:1813, date:null, cat:"科学技術", text:"王立研究所（The Royal Institution of Great Britain）教授に", person:"マイケル・ファラデー", nameAlt: "Michael Faraday", country:"イギリス", place:"ロンドン", type:"event" }, 
 
+  // ―― 1814 ――
+  { year:1814, date:"8月21日", cat:"科学技術", text:"死去（1753年生まれ）", person:"ベンジャミン・トムソン", nameAlt: "Benjamin Thompson", country:"フランス", place:"パリ", type:"death" },
+
   // ―― 1815 ――
   { year:1815, date:null, cat:"科学技術", text:"鉱山業者たち、ハンフリー・デイヴィーに安全灯の考案を依頼", person:"ハンフリー・デイヴィー", nameAlt: "Humphry Davy", country:"イギリス", place:null, type:"event" },
 
@@ -198,6 +209,7 @@ const EVENTS = [
   { year:1817, date:"6月30日", cat:"科学技術", text:"生誕　植物学者　", person:"ジョセフ・ダルトン・フッカー", nameAlt: "Joseph Dalton Hooker", country:"イギリス", place:"ヘイルスワース", type:"birth" },
 
   // ―― 1820 ――
+  { year:1820, date:"6月19日", cat:"科学技術", text:"死去（1743年生まれ）　博物学者", person:"ジョゼフ・バンクス", nameAlt: "Joseph Banks", country:"イギリス", place:"アイルワース", type:"death" },
   { year:1820, date:"8月2日", cat:"科学技術", text:"生誕", person:"ジョン・ティンダル", nameAlt: "John Tyndall", country:"イギリス", place:"アイルランド", type:"birth" },
   { year:1820, date:null, cat:"科学技術", text:"ゴムの加工法、開発", person:"トーマス・ハンコック", nameAlt: "Thomas Hancock", country:"イギリス", place:"ロンドン", type:"event" },
 
@@ -276,6 +288,7 @@ const EVENTS = [
   { year:1839, date:"11月15日", cat:"科学技術", text:"死去（1754年生まれ）　ボールトン・ワット商会の技師", person:"ウィリアム・マードック", nameAlt: "William Murdock", country:"イギリス", place:"バーミンガム", type:"death" },
 
   // ―― 1840 ――
+  { year:1840, date:"6月5日", cat:"音楽", text:"死去（1755年生まれ）ピアニスト・ヴァイオリニスト", person:"ウィリアム・ダンス", nameAlt: "William Dance", country:"イギリス", place:"", type:"death" },
   { year:1840, date:"10月14日", cat:"科学技術", text:"生誕　物理学者", person:"フリードリヒ・コールラウシュ", nameAlt: "Friedrich Wilhelm Georg Kohlrausch", country:"ドイツ", place:"リンテルン", type:"birth" },
   { year:1840, date:"12月", cat:"科学技術", text:"クリスマス講演", person:"ジョン＝フレデリック・ダニエル", nameAlt: "John Frederic Daniell", country:"イギリス", place:"ロンドン", type:"event" },
 
