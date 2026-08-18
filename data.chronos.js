@@ -312,7 +312,7 @@ const EVENTS = [
 
   // ── 1843 ──
   { year:1843, date:null, cat:"国際政治", text:"清、イギリスに香港を割譲", person:null, country:"清/イギリス", type:"event" },
-  { year:1843, date:"2月12日", cat:"宗教", text:"新島襄　生誕　キリスト教系教育者", country:"日本", place:"東京", type:"birth" },
+  { year:1843, date:"2月12日", cat:"宗教", text:"生誕　キリスト教系教育者", country:"日本", place:"東京", type:"birth" },
   { year:1843, date:"3月27日", cat:"社会", text:"マルタン=ギヨーム・ビエンネ　死去　金細工職人", country:"フランス", place:"パリ", type:"death" },
   { year:1843, date:"3月30日", cat:"文学", text:"コンスタンティン・ミハイロヴィチ・スタニュコーヴィチ　生誕", country:"ロシア", place:"セヴァストーポリ", type:"birth" },
   { year:1843, date:"4月15日", cat:"文学", text:"ヘンリー・ジェイムズ　生誕", country:"アメリカ", place:"ニューヨーク", type:"birth" },
@@ -507,6 +507,7 @@ const EVENTS = [
   { year:1857, date:null, cat:"文学", text:"トマス・ヒューズ『トム・ブラウンの学校生活』", person:null, country:"イギリス", type:"event" },
 
   // ── 1858 ──
+  { year:1858, date:"1月15日", cat:"宗教", text:"生誕（1925年没）", person:"植村正久", nameAlt: "うえむら まさひさ", country:"日本", place:"江戸", type:"birth" },
   { year:1858, date:null,  cat:"国内政治", text:"ナポレオン三世暗殺未遂（オルシーニ事件）", person:null, country:"フランス", type:"event" },
   { year:1858, date:null, cat:"国際政治", text:"プロンビエール密約（フランス・イタリア）カヴールとナポレオン三世", person:null,  country:"フランス/イタリア", type:"event" },
   { year:1858, date:null, cat:"文学", text:"ボードレール『悪の華』刊行", person:null, country:"フランス", type:"event" },
@@ -521,6 +522,7 @@ const EVENTS = [
   { year:1859, date:"4月8日", cat:"思想", text:"フッサール　生誕　モラヴィア", person:null, country:"オーストリア", type:"birth" },
   { year:1859, date:"10月18日", cat:"思想", text:"生誕（1941年没）", person:"アンリ・ベルクソン", nameAlt: "Henri Bergson", country:"フランス", place:"パリ", type:"birth" },
   { year:1859, date:"11月21日", cat:"思想", text:"死去（死刑）", person:"吉田松陰", nameAlt: "よしだ しょういん", country:"日本", place:"江戸", type:"death" },
+  { year:1859, date:"12月26日", cat:"社会", text:"生誕（1933年没）　活動家", person:"片山潜", nameAlt: "かたやま せん", country:"日本", place:"岡山", type:"birth" },
   { year:1859, date:null, cat:"科学技術", text:"分光器を発明", person:"ロベルト・ヴィルヘルム・ブンゼン、グスタフ・キルヒホッフ", nameAlt: "Robert Wilhelm Bunsen, Gustav Robert Kirchhoff", country:"ドイツ", place:null, type:"event" },
   { year:1856, date:null, cat:"科学技術", text:"マゼンタの合成染料、発明", person:"フランソワ＝エマニュエル・ヴェルガン", nameAlt: "François-Emmanuel Verguin", country:"フランス", place:null, type:"event" },
   { year:1859, date:null, cat:"メディア", text:"『科学ニュース』、創刊（1932年まで）", person:"ウィリアム・クルックス", nameAlt: ["Chemical News", "William Crookes" ], country:"イギリス", place:"ロンドン", type:"event" },
@@ -537,6 +539,7 @@ const EVENTS = [
   // ── 1861 ──
   { year:1861, date:null, cat:"国際政治", text:"アメリカ南北戦争勃発（〜1865年）",  person:null, country:"アメリカ", type:"event" },
   { year:1861, date:"2月20日", cat:"文学", text:"ウジェーヌ・スクリーブ　死去　パリ", person:null, country:"フランス", type:"death" },
+  { year:1861, date:"3月26日", cat:"思想", text:"生誕（1930年没）", person:"内村鑑三", nameAlt: "うちむら かんぞう", country:"日本", place:"江戸", type:"birth" },
   { year:1861, date:"4月19日", cat:"科学技術", text:"死去　軍事技術者、火薬の権威", person:"チャールズ＝ウィリアム・パスレー", nameAlt: "Charles William Pasley", country:"イギリス", place:"ロンドン", type:"death" },
   { year:1861, date:"7月8日", cat:"科学技術", text:"生誕（1933年没）", person:"ジョン・アーサー・トムソン", nameAlt:"John Arthur Thomson", country:"イギリス", place:"スコットランド", type:"birth" },
   { year:1861, date:null, cat:"科学技術", text:"『ロウソクの科学』（Griffin, Bohn and Co.より）", person:"マイケル・ファラデー",  nameAlt: "Michael Faraday", country:"イギリス", place:"", type:"event" },
@@ -545,7 +548,8 @@ const EVENTS = [
   // ── 1862 ──
   { year:1862, date:null, cat:"国際政治",  text:"万国博覧会（ロンドン）", person:null, country:"イギリス", type:"event" },
   { year:1862, date:"1月18日", cat:"舞台芸術", text:"プティパ振付『ファラオの娘』ボリショイ・カーメンヌィ劇場初演", person:null, country:"ロシア", type:"event" },
-  { year:1862, date:"2月17日", cat:"文学", text:"森鴎外　生誕　石見（島根）", person:null, country:"日本", type:"birth" },
+  { year:1862, date:"2月17日", cat:"文学", text:"生誕", person:"森鴎外", nameAlt:"もり おうがい", country:"日本", place:"島根",  type:"birth" },
+  { year:1862, date:"9月1日", cat:"思想", text:"生誕（1933年没）", person:"新渡戸稲造", nameAlt: "にとべ いなぞう", country:"日本", place:"岩手", type:"birth" },
 
   // ── 1863 ──
   { year:1863, date:"1月17日", cat:"舞台芸術", text:"生誕　モスクワ", person:"コンスタンティン・スタニスラフスキー", country:"ロシア", type:"birth" },
@@ -567,7 +571,8 @@ const EVENTS = [
   { year:1865, date:"1月14日", cat:"文学", text:"『エレン』刊行（ルイ・ダヴィル書店）", person:"ヴィリエ・ド・リラダン", country:"フランス", type:"event" },
   { year:1865, date:"1月19日", cat:"思想", text:"プルードン　死去　パリ", person:null, country:"フランス", type:"death" },
   { year:1865, date:"1月23日", cat:"要人", text:"　死去（大動脈解離）", person:"アルセーニー・アンドレーヴィチ・ザクレフスキー伯", country:"イタリア", place:"フィレンツェ",  type:"death" },
-    { year:1786, date:"3月26日", cat:"科学技術", text:"死去　発明家", person:"トーマス・ハンコック", nameAlt: "Thomas Hancock", country:"イギリス", place:"ロンドン", type:"death" },
+  { year:1865, date:"3月1日", cat:"要人", text:"生誕（1949年没）", person:"安部磯雄", nameAlt: "あべ いそお", country:"日本", place:"福岡", type:"birth" },
+  { year:1786, date:"3月26日", cat:"科学技術", text:"死去　発明家", person:"トーマス・ハンコック", nameAlt: "Thomas Hancock", country:"イギリス", place:"ロンドン", type:"death" },
   { year:1865, date:"4月1日",   cat:"社会", text:"ローマ＝オルテ間　鉄道開通", person:null, country:"イタリア", place:null,  type:"event" },
   { year:1865, date:"4月15日", cat:"国際政治", text:"エイブラハム・リンカーン暗殺", person:null, country:"アメリカ", type:"death" },
   { year:1865, date:"4月24日", cat:"要人",  text:"死去（結核性髄膜炎）", person:"ニコライ・アレクサンドロヴィチ",  country:"フランス", place: "ニース", type:"death" },
@@ -602,8 +607,10 @@ const EVENTS = [
   { year:1870, date:"1月25日", cat:"要人", text:"死去　政治家", person:"ヴィクトル・ド・ブロイ公爵", nameAlt: "Achille Léonce Victor Charles de Broglie", country:"フランス", place:"パリ", type:"death" },
 
   // ―― 1871 ――
+  { year:1871, date:"1月15日", cat:"思想", text:"生誕（1933年没）", person:"堺利彦", nameAlt: "さかい としひこ", country:"日本", place:"福岡", type:"birth" },
   { year:1871, date:"2月28日", cat:"思想", text:"生誕", person:"高山樗牛", nameAlt: "たかやま ちょぎゅう", country:"日本", place:"山形", type:"birth" },
   { year:1871, date:"5月11日", cat:"科学技術", text:"死去　天文学者", person:"ジョン・ハーシェル", nameAlt: "John Frederick William Herschel", country:"イギリス", place:"ホークハースト", type:"death" },
+  { year:1871, date:"11月5日", cat:"思想", text:"生誕", person:"幸徳秋水", nameAlt: "こうとく しゅうすい", country:"日本", place:"高知", type:"birth" },
 
   // ―― 1872 ――
   { year:1872, date:"5月18日", cat:"思想", text:"生誕（1970年没）　哲学者", person:"バートランド・ラッセル", nameAlt: "Bertrand Arthur William Russell", country:"イギリス", place:"ウェールズ", type:"birth" },
@@ -624,6 +631,7 @@ const EVENTS = [
 
   // ―― 1879 ――
   { year:1879, date:"2月19日", cat:"美術", text:"講演「民衆の芸術」", person:"ウィリアム・モリス", nameAlt: "William Morris", country:"イギリス", place:"バーミンガム美術デザイン学校", type:"event" },
+  { year:1879, date:"10月20日", cat:"思想", text:"生誕（1946年没）", person:"河上肇", nameAlt: "かわかみ はじめ", country:"日本", place:"山口", type:"birth" },
   { year:1879, date:"11月5日", cat:"科学技術", text:"死去", person:"ジェームズ・クラーク・マクスウェル", nameAlt: "James Clerk Maxwell", country:"イギリス", place:"ケンブリッジ", type:"death" },
   { year:1879, date:null, cat:"思想", text:"『民権自由論』", person:"植木枝盛", nameAlt: "うえき えもり", country:"日本", place:null, type:"event" },
 
@@ -643,10 +651,14 @@ const EVENTS = [
 
   // ―― 1888 ――
   { year:1888, date:"4月", cat:"メディア", text:"月刊～週刊雑誌『日本人』、創刊", person:"三宅雪嶺", nameAlt: "みやけ せつれい", country:"日本", place:"", type:"event" },
-  { year:1888, date:"5月26日", cat:"科学技術", text:"死去　化学者", person:"アスカニオ・ソブレロ", nameAlt: "Ascanio Sobrero", country:"イタリア", place:"トリノ", type:"death" }, 
+  { year:1888, date:"5月26日", cat:"科学技術", text:"死去　化学者", person:"アスカニオ・ソブレロ", nameAlt: "Ascanio Sobrero", country:"イタリア", place:"トリノ", type:"death" },
+  { year:1888, date:"7月10日", cat:"社会", text:"生誕（1960年没）　社会活動家", person:"賀川豊彦", nameAlt: "かがわ とよひこ", country:"日本", place:"兵庫", type:"birth" },
 
   // ―― 1889 ――
   { year:1889, date:"2月11日", cat:"メディア", text:"日刊新聞『日本』、創刊", person:"陸羯南", nameAlt: "くが かつなん", country:"日本", place:"東京", type:"event" },
+
+  // ―― 1890 ――
+  { year:1890, date:"1月23日", cat:"宗教", text:"死去（急性腹膜炎）", person:"新島襄", nameAlt: "にいじま じょう", country:"日本", place:"神奈川", type:"death" },
 
   // ―― 1891 ――
   { year:1891, date:"1月22日", cat:"思想", text:"生誕（1937年没）", person:"アントニオ・グラムシ", nameAlt: "Antonio Gramsci", country:"イタリア", place:"アーレス", type:"birth" }, 
@@ -656,6 +668,7 @@ const EVENTS = [
   { year:1892, date:"1月23日", cat:"思想", text:"死去（胃潰瘍）", person:"植木枝盛", nameAlt: "うえき えもり", country:"日本", place:"東京", type:"death" },
   
   // ―― 1893 ――
+  { year:1893, date:"1月27日", cat:"宗教", text:"生誕（1961年没）", person:"矢内原忠雄", nameAlt: "やないはら ただお", country:"日本", place:"愛媛", type:"birth" },
   { year:1893, date:"12月4日", cat:"科学技術", text:"死去", person:"ジョン・ティンダル", nameAlt: "John Tyndall", country:"イギリス", place:"サリー", type:"death" },
 
   // ―― 1895 ――
@@ -682,6 +695,7 @@ const EVENTS = [
   // ―― 1901 ――
   { year:1891, date:"6月7日", cat:"思想", text:"死去", person:"中村正直", nameAlt: "なかむら まさなお", country:"日本", place:"東京", type:"death" },
   { year:1901, date:"12月13日", cat:"思想", text:"死去（食道癌）", person:"中江兆民", nameAlt: "なかえ　ちょうみん", country:"日本", place:"大阪", type:"death" },
+  { year:1901, date:"5月18日", cat:"国内政治", text:"社会民主党を結成（即日禁止）", person:["片山潜", "幸徳秋水"], nameAlt: null, country:"日本", place:"", type:"event" },
 
   // ―― 1902 ――
   { year:1902, date:"5月18日", cat:"思想", text:"生誕（1964年没）　社会学者", person:"フリッツ・パッペンハイム", nameAlt: "Fritz Pappenheim", country:"ドイツ", place:"ケルン", type:"birth" },
@@ -715,6 +729,7 @@ const EVENTS = [
   { year:1910, date:"8月26日", cat:"宗教", text:"生誕（1997年没）", person:"マザー・テレサ", nameAlt: "Mother Teresa", country:"北マケドニア", place:"スコピエ", type:"birth" },
 
   // ―― 1911 ――
+  { year:1911, date:"1月24日", cat:"思想", text:"死去（大逆事件で処刑）", person:"幸徳秋水", nameAlt: "こうとく しゅうすい", country:"日本", place:"東京", type:"death" },
   { year:1911, date:"6月30日", cat:"科学技術", text:"死去　植物学者　", person:"ジョセフ・ダルトン・フッカー", nameAlt: "Joseph Dalton Hooker", country:"イギリス", place:"ヘイルスワース", type:"death" },
   { year:1842, date:"11月26日", cat:"思想", text:"死去（自死）", person:"ポール・ラファルグ", nameAlt: "Paul Lafargue", country:"フランス", place:"ドラヴェイユ", type:"death" },
   
